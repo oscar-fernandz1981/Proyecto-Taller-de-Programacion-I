@@ -1,0 +1,21 @@
+PROYECTO: Multirubro BLASS
+URL LOCAL: http://localhost/fernandez_oscar/
+
+1. PERFIL ADMINISTRADOR
+*************************
+
+Usuario: admin@gmail.com (o el que uses)
+
+Password: 123456
+
+Funciones: Gestión de productos, alta/baja de usuarios, ver todas las ventas.
+
+
+2. PERFIL CLIENTE
+********************
+
+Usuario: enzo@gmail.com
+
+Password: 123456
+
+Funciones: Ver catálogo, carrito de compras, descargar facturas PDF, contacto.
