@@ -1,0 +1,9 @@
+CRITICAL - 2024-04-22 08:53:50 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "promociones.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('promociones.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('promociones', [], true)
+ 3 APPPATH\Controllers\Home.php(50): view('promociones')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->promociones()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

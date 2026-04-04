@@ -1,0 +1,27 @@
+CRITICAL - 2025-12-16 03:07:37 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "back/admin/reportes.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('back/admin/reportes.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('back/admin/reportes', [], true)
+ 3 APPPATH\Controllers\Carrito_controller.php(65): view('back/admin/reportes', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Carrito_controller->mostrar_reportes()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-12-16 03:21:15 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "back/admin/reportes.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('back/admin/reportes.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('back/admin/reportes', [], true)
+ 3 APPPATH\Controllers\Carrito_controller.php(65): view('back/admin/reportes', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Carrito_controller->mostrar_reportes()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-12-16 03:23:18 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "back/admin/reportes.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('back/admin/reportes.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('back/admin/reportes', [], true)
+ 3 APPPATH\Controllers\Carrito_controller.php(65): view('back/admin/reportes', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Carrito_controller->mostrar_reportes()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

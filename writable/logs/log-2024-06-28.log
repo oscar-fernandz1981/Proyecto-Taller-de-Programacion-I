@@ -1,0 +1,73 @@
+CRITICAL - 2024-06-28 19:50:21 --> Error: Class "Kint\Renderer\AbstractRenderer" not found
+in SYSTEMPATH\Config\Factories.php on line 218.
+ 1 SYSTEMPATH\Config\Factories.php(168): CodeIgniter\Config\Factories::createInstance('config', 'Config\\Kint', [])
+ 2 SYSTEMPATH\Common.php(215): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 3 SYSTEMPATH\CodeIgniter.php(299): config('Config\\Kint')
+ 4 SYSTEMPATH\CodeIgniter.php(265): CodeIgniter\CodeIgniter->configureKint()
+ 5 SYSTEMPATH\CodeIgniter.php(223): CodeIgniter\CodeIgniter->initializeKint()
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-06-28 19:50:30 --> Error: Class "Kint\Renderer\AbstractRenderer" not found
+in SYSTEMPATH\Config\Factories.php on line 218.
+ 1 SYSTEMPATH\Config\Factories.php(168): CodeIgniter\Config\Factories::createInstance('config', 'Config\\Kint', [])
+ 2 SYSTEMPATH\Common.php(215): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 3 SYSTEMPATH\CodeIgniter.php(299): config('Config\\Kint')
+ 4 SYSTEMPATH\CodeIgniter.php(265): CodeIgniter\CodeIgniter->configureKint()
+ 5 SYSTEMPATH\CodeIgniter.php(223): CodeIgniter\CodeIgniter->initializeKint()
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-06-28 19:51:38 --> Error: Class "Kint\Renderer\AbstractRenderer" not found
+in SYSTEMPATH\Config\Factories.php on line 218.
+ 1 SYSTEMPATH\Config\Factories.php(168): CodeIgniter\Config\Factories::createInstance('config', 'Config\\Kint', [])
+ 2 SYSTEMPATH\Common.php(215): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 3 SYSTEMPATH\CodeIgniter.php(299): config('Config\\Kint')
+ 4 SYSTEMPATH\CodeIgniter.php(265): CodeIgniter\CodeIgniter->configureKint()
+ 5 SYSTEMPATH\CodeIgniter.php(223): CodeIgniter\CodeIgniter->initializeKint()
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-06-28 19:51:38 --> Error: Class "Kint\Renderer\AbstractRenderer" not found
+in SYSTEMPATH\Config\Factories.php on line 218.
+ 1 SYSTEMPATH\Config\Factories.php(168): CodeIgniter\Config\Factories::createInstance('config', 'Config\\Kint', [])
+ 2 SYSTEMPATH\Common.php(215): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 3 SYSTEMPATH\CodeIgniter.php(299): config('Config\\Kint')
+ 4 SYSTEMPATH\CodeIgniter.php(265): CodeIgniter\CodeIgniter->configureKint()
+ 5 SYSTEMPATH\CodeIgniter.php(223): CodeIgniter\CodeIgniter->initializeKint()
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->initialize()
+ERROR - 2024-06-28 19:51:52 --> An invalid name was submitted as the product name:  The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+CRITICAL - 2024-06-28 19:52:45 --> Error: Class "Kint\Renderer\AbstractRenderer" not found
+in SYSTEMPATH\Config\Factories.php on line 218.
+ 1 SYSTEMPATH\Config\Factories.php(168): CodeIgniter\Config\Factories::createInstance('config', 'Config\\Kint', [])
+ 2 SYSTEMPATH\Common.php(215): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 3 SYSTEMPATH\CodeIgniter.php(299): config('Config\\Kint')
+ 4 SYSTEMPATH\CodeIgniter.php(265): CodeIgniter\CodeIgniter->configureKint()
+ 5 SYSTEMPATH\CodeIgniter.php(223): CodeIgniter\CodeIgniter->initializeKint()
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-06-28 19:52:45 --> Error: Class "Kint\Renderer\AbstractRenderer" not found
+in SYSTEMPATH\Config\Factories.php on line 218.
+ 1 SYSTEMPATH\Config\Factories.php(168): CodeIgniter\Config\Factories::createInstance('config', 'Config\\Kint', [])
+ 2 SYSTEMPATH\Common.php(215): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 3 SYSTEMPATH\CodeIgniter.php(299): config('Config\\Kint')
+ 4 SYSTEMPATH\CodeIgniter.php(265): CodeIgniter\CodeIgniter->configureKint()
+ 5 SYSTEMPATH\CodeIgniter.php(223): CodeIgniter\CodeIgniter->initializeKint()
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-06-28 19:52:51 --> Error: Class "Kint\Renderer\AbstractRenderer" not found
+in SYSTEMPATH\Config\Factories.php on line 218.
+ 1 SYSTEMPATH\Config\Factories.php(168): CodeIgniter\Config\Factories::createInstance('config', 'Config\\Kint', [])
+ 2 SYSTEMPATH\Common.php(215): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 3 SYSTEMPATH\CodeIgniter.php(299): config('Config\\Kint')
+ 4 SYSTEMPATH\CodeIgniter.php(265): CodeIgniter\CodeIgniter->configureKint()
+ 5 SYSTEMPATH\CodeIgniter.php(223): CodeIgniter\CodeIgniter->initializeKint()
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-06-28 19:52:51 --> Error: Class "Kint\Renderer\AbstractRenderer" not found
+in SYSTEMPATH\Config\Factories.php on line 218.
+ 1 SYSTEMPATH\Config\Factories.php(168): CodeIgniter\Config\Factories::createInstance('config', 'Config\\Kint', [])
+ 2 SYSTEMPATH\Common.php(215): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 3 SYSTEMPATH\CodeIgniter.php(299): config('Config\\Kint')
+ 4 SYSTEMPATH\CodeIgniter.php(265): CodeIgniter\CodeIgniter->configureKint()
+ 5 SYSTEMPATH\CodeIgniter.php(223): CodeIgniter\CodeIgniter->initializeKint()
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-06-28 19:53:41 --> Error: Class "Kint\Renderer\AbstractRenderer" not found
+in SYSTEMPATH\Config\Factories.php on line 218.
+ 1 SYSTEMPATH\Config\Factories.php(168): CodeIgniter\Config\Factories::createInstance('config', 'Config\\Kint', [])
+ 2 SYSTEMPATH\Common.php(215): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 3 SYSTEMPATH\CodeIgniter.php(299): config('Config\\Kint')
+ 4 SYSTEMPATH\CodeIgniter.php(265): CodeIgniter\CodeIgniter->configureKint()
+ 5 SYSTEMPATH\CodeIgniter.php(223): CodeIgniter\CodeIgniter->initializeKint()
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->initialize()

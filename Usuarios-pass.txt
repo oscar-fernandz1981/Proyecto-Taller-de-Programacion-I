@@ -1,0 +1,10 @@
+ADMIN
+
+email: fernandez.r.oscar@gmail.com
+pass: 123456
+
+
+
+CLIENTE
+email: joselo@correo.com
+pass: 123456

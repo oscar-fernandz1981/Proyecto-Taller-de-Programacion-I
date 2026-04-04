@@ -1,0 +1,411 @@
+ERROR - 2024-07-01 00:28:11 --> mysqli_sql_exception: Unknown column 'd.id' in 'field list' in C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `d`.`id`...', 0)
+#1 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `d`.`id`...')
+#2 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `d`.`id`...')
+#3 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `d`.`id`...', Array, false)
+#4 C:\xampp\htdocs\fernandez_oscar\app\Controllers\Carrito_controller.php(112): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(941): App\Controllers\Carrito_controller->ListCompraDetalle('1')
+#6 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+#7 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\fernandez_oscar\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-07-01 00:28:12 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "back/admin/CompraDetalle_view.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('back/admin/CompraDetalle_view.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('back/admin/CompraDetalle_view', [], true)
+ 3 APPPATH\Controllers\Carrito_controller.php(122): view('back/admin/CompraDetalle_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Carrito_controller->ListCompraDetalle('1')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-01 00:32:10 --> mysqli_sql_exception: Unknown column 'd.id' in 'field list' in C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `d`.`id`...', 0)
+#1 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `d`.`id`...')
+#2 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `d`.`id`...')
+#3 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `d`.`id`...', Array, false)
+#4 C:\xampp\htdocs\fernandez_oscar\app\Controllers\Carrito_controller.php(112): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(941): App\Controllers\Carrito_controller->ListCompraDetalle('1')
+#6 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+#7 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\fernandez_oscar\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-07-01 00:32:10 --> ErrorException: Undefined array key "nombre"
+in APPPATH\Views\back\admin\CompraDetalle_view.php on line 36.
+ 1 APPPATH\Views\back\admin\CompraDetalle_view.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\admin\\CompraDetalle_view.php', 36)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\admin\\CompraDetalle_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('back/admin/CompraDetalle_view', [], true)
+ 5 APPPATH\Controllers\Carrito_controller.php(122): view('back/admin/CompraDetalle_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Carrito_controller->ListCompraDetalle('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-01 00:36:23 --> mysqli_sql_exception: Unknown column 'd.id' in 'field list' in C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `d`.`id`...', 0)
+#1 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `d`.`id`...')
+#2 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `d`.`id`...')
+#3 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `d`.`id`...', Array, false)
+#4 C:\xampp\htdocs\fernandez_oscar\app\Controllers\Carrito_controller.php(112): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(941): App\Controllers\Carrito_controller->ListCompraDetalle('1')
+#6 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+#7 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\fernandez_oscar\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-07-01 00:36:23 --> ErrorException: Undefined array key "nombre_prod"
+in APPPATH\Views\back\admin\CompraDetalle_view.php on line 36.
+ 1 APPPATH\Views\back\admin\CompraDetalle_view.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre_prod"', 'C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\admin\\CompraDetalle_view.php', 36)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\admin\\CompraDetalle_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('back/admin/CompraDetalle_view', [], true)
+ 5 APPPATH\Controllers\Carrito_controller.php(122): view('back/admin/CompraDetalle_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Carrito_controller->ListCompraDetalle('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-01 00:40:50 --> mysqli_sql_exception: Unknown column 'd.id' in 'field list' in C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `d`.`id`...', 0)
+#1 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `d`.`id`...')
+#2 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `d`.`id`...')
+#3 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `d`.`id`...', Array, false)
+#4 C:\xampp\htdocs\fernandez_oscar\app\Controllers\Carrito_controller.php(112): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(941): App\Controllers\Carrito_controller->ListCompraDetalle('1')
+#6 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+#7 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\fernandez_oscar\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-07-01 00:40:50 --> ErrorException: Undefined array key "id_producto"
+in APPPATH\Views\back\admin\CompraDetalle_view.php on line 35.
+ 1 APPPATH\Views\back\admin\CompraDetalle_view.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_producto"', 'C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\admin\\CompraDetalle_view.php', 35)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\admin\\CompraDetalle_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('back/admin/CompraDetalle_view', [], true)
+ 5 APPPATH\Controllers\Carrito_controller.php(122): view('back/admin/CompraDetalle_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Carrito_controller->ListCompraDetalle('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-01 00:41:33 --> mysqli_sql_exception: Unknown column 'c.id' in 'on clause' in C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `a`.`id`...', 0)
+#1 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`id`...')
+#2 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`id`...')
+#3 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`id`...', Array, false)
+#4 C:\xampp\htdocs\fernandez_oscar\app\Controllers\Carrito_controller.php(328): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(941): App\Controllers\Carrito_controller->FacturaCliente('1')
+#6 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+#7 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\fernandez_oscar\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-07-01 00:41:33 --> Error: Call to a member function getResultArray() on bool
+in APPPATH\Controllers\Carrito_controller.php on line 329.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Carrito_controller->FacturaCliente('1')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-01 00:42:36 --> mysqli_sql_exception: Unknown column 'd.id' in 'field list' in C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `d`.`id`...', 0)
+#1 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `d`.`id`...')
+#2 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `d`.`id`...')
+#3 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `d`.`id`...', Array, false)
+#4 C:\xampp\htdocs\fernandez_oscar\app\Controllers\Carrito_controller.php(112): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(941): App\Controllers\Carrito_controller->ListCompraDetalle('1')
+#6 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+#7 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\fernandez_oscar\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-07-01 00:42:36 --> ErrorException: Undefined array key "id_producto"
+in APPPATH\Views\back\admin\CompraDetalle_view.php on line 35.
+ 1 APPPATH\Views\back\admin\CompraDetalle_view.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_producto"', 'C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\admin\\CompraDetalle_view.php', 35)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\admin\\CompraDetalle_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('back/admin/CompraDetalle_view', [], true)
+ 5 APPPATH\Controllers\Carrito_controller.php(122): view('back/admin/CompraDetalle_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Carrito_controller->ListCompraDetalle('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-01 00:47:53 --> mysqli_sql_exception: Unknown column 'd.id' in 'field list' in C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `d`.`id`...', 0)
+#1 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `d`.`id`...')
+#2 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `d`.`id`...')
+#3 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `d`.`id`...', Array, false)
+#4 C:\xampp\htdocs\fernandez_oscar\app\Controllers\Carrito_controller.php(112): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(941): App\Controllers\Carrito_controller->ListCompraDetalle('1')
+#6 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+#7 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\fernandez_oscar\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-07-01 00:47:53 --> ErrorException: Undefined array key "nombre_prod"
+in APPPATH\Views\back\admin\CompraDetalle_view.php on line 36.
+ 1 APPPATH\Views\back\admin\CompraDetalle_view.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre_prod"', 'C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\admin\\CompraDetalle_view.php', 36)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\admin\\CompraDetalle_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('back/admin/CompraDetalle_view', [], true)
+ 5 APPPATH\Controllers\Carrito_controller.php(122): view('back/admin/CompraDetalle_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Carrito_controller->ListCompraDetalle('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-01 00:53:53 --> mysqli_sql_exception: Unknown column 'd.id' in 'field list' in C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `d`.`id`...', 0)
+#1 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `d`.`id`...')
+#2 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `d`.`id`...')
+#3 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `d`.`id`...', Array, false)
+#4 C:\xampp\htdocs\fernandez_oscar\app\Controllers\Carrito_controller.php(112): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(941): App\Controllers\Carrito_controller->ListCompraDetalle('1')
+#6 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+#7 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\fernandez_oscar\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-07-01 00:53:53 --> ErrorException: Undefined array key "nombre_prod"
+in APPPATH\Views\back\admin\CompraDetalle_view.php on line 36.
+ 1 APPPATH\Views\back\admin\CompraDetalle_view.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre_prod"', 'C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\admin\\CompraDetalle_view.php', 36)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\admin\\CompraDetalle_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('back/admin/CompraDetalle_view', [], true)
+ 5 APPPATH\Controllers\Carrito_controller.php(122): view('back/admin/CompraDetalle_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Carrito_controller->ListCompraDetalle('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-01 00:54:26 --> mysqli_sql_exception: Unknown column 'd.id' in 'field list' in C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `d`.`id`...', 0)
+#1 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `d`.`id`...')
+#2 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `d`.`id`...')
+#3 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `d`.`id`...', Array, false)
+#4 C:\xampp\htdocs\fernandez_oscar\app\Controllers\Carrito_controller.php(112): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(941): App\Controllers\Carrito_controller->ListCompraDetalle('1')
+#6 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+#7 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\fernandez_oscar\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-07-01 00:54:26 --> ErrorException: Undefined array key "nombre"
+in APPPATH\Views\back\admin\CompraDetalle_view.php on line 36.
+ 1 APPPATH\Views\back\admin\CompraDetalle_view.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\admin\\CompraDetalle_view.php', 36)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\admin\\CompraDetalle_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('back/admin/CompraDetalle_view', [], true)
+ 5 APPPATH\Controllers\Carrito_controller.php(122): view('back/admin/CompraDetalle_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Carrito_controller->ListCompraDetalle('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-01 00:57:05 --> mysqli_sql_exception: Unknown column 'd.id' in 'field list' in C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `d`.`id`...', 0)
+#1 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `d`.`id`...')
+#2 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `d`.`id`...')
+#3 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `d`.`id`...', Array, false)
+#4 C:\xampp\htdocs\fernandez_oscar\app\Controllers\Carrito_controller.php(112): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(941): App\Controllers\Carrito_controller->ListCompraDetalle('1')
+#6 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+#7 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\fernandez_oscar\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-07-01 00:57:06 --> ErrorException: Undefined array key "nombre_prod"
+in APPPATH\Views\back\admin\CompraDetalle_view.php on line 36.
+ 1 APPPATH\Views\back\admin\CompraDetalle_view.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre_prod"', 'C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\admin\\CompraDetalle_view.php', 36)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\admin\\CompraDetalle_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('back/admin/CompraDetalle_view', [], true)
+ 5 APPPATH\Controllers\Carrito_controller.php(122): view('back/admin/CompraDetalle_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Carrito_controller->ListCompraDetalle('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-01 00:57:45 --> mysqli_sql_exception: Unknown column 'd.id' in 'field list' in C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `d`.`id`...', 0)
+#1 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `d`.`id`...')
+#2 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `d`.`id`...')
+#3 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `d`.`id`...', Array, false)
+#4 C:\xampp\htdocs\fernandez_oscar\app\Controllers\Carrito_controller.php(112): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(941): App\Controllers\Carrito_controller->ListCompraDetalle('2')
+#6 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+#7 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\fernandez_oscar\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-07-01 00:57:45 --> ErrorException: Undefined array key "nombre_prod"
+in APPPATH\Views\back\admin\CompraDetalle_view.php on line 36.
+ 1 APPPATH\Views\back\admin\CompraDetalle_view.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre_prod"', 'C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\admin\\CompraDetalle_view.php', 36)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\admin\\CompraDetalle_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('back/admin/CompraDetalle_view', [], true)
+ 5 APPPATH\Controllers\Carrito_controller.php(122): view('back/admin/CompraDetalle_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Carrito_controller->ListCompraDetalle('2')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-01 00:57:54 --> mysqli_sql_exception: Unknown column 'd.id' in 'field list' in C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `d`.`id`...', 0)
+#1 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `d`.`id`...')
+#2 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `d`.`id`...')
+#3 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `d`.`id`...', Array, false)
+#4 C:\xampp\htdocs\fernandez_oscar\app\Controllers\Carrito_controller.php(112): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(941): App\Controllers\Carrito_controller->ListCompraDetalle('4')
+#6 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+#7 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\fernandez_oscar\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-07-01 00:57:54 --> ErrorException: Undefined array key "nombre_prod"
+in APPPATH\Views\back\admin\CompraDetalle_view.php on line 36.
+ 1 APPPATH\Views\back\admin\CompraDetalle_view.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre_prod"', 'C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\admin\\CompraDetalle_view.php', 36)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\admin\\CompraDetalle_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('back/admin/CompraDetalle_view', [], true)
+ 5 APPPATH\Controllers\Carrito_controller.php(122): view('back/admin/CompraDetalle_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Carrito_controller->ListCompraDetalle('4')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-01 01:03:30 --> mysqli_sql_exception: Unknown column 'd.id' in 'field list' in C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `d`.`id`...', 0)
+#1 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `d`.`id`...')
+#2 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `d`.`id`...')
+#3 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `d`.`id`...', Array, false)
+#4 C:\xampp\htdocs\fernandez_oscar\app\Controllers\Carrito_controller.php(112): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(941): App\Controllers\Carrito_controller->ListCompraDetalle('1')
+#6 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+#7 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\fernandez_oscar\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-07-01 01:14:39 --> ErrorException: Undefined array key "nombre_prod"
+in APPPATH\Views\back\admin\CompraDetalle_view.php on line 36.
+ 1 APPPATH\Views\back\admin\CompraDetalle_view.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre_prod"', 'C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\admin\\CompraDetalle_view.php', 36)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\admin\\CompraDetalle_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('back/admin/CompraDetalle_view', [], true)
+ 5 APPPATH\Controllers\Carrito_controller.php(122): view('back/admin/CompraDetalle_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Carrito_controller->ListCompraDetalle('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-01 01:16:00 --> ErrorException: Undefined array key "id_producto"
+in APPPATH\Views\back\admin\CompraDetalle_view.php on line 35.
+ 1 APPPATH\Views\back\admin\CompraDetalle_view.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_producto"', 'C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\admin\\CompraDetalle_view.php', 35)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\admin\\CompraDetalle_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('back/admin/CompraDetalle_view', [], true)
+ 5 APPPATH\Controllers\Carrito_controller.php(122): view('back/admin/CompraDetalle_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Carrito_controller->ListCompraDetalle('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-01 01:16:19 --> ErrorException: Undefined array key "id_producto"
+in APPPATH\Views\back\admin\CompraDetalle_view.php on line 35.
+ 1 APPPATH\Views\back\admin\CompraDetalle_view.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_producto"', 'C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\admin\\CompraDetalle_view.php', 35)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\admin\\CompraDetalle_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('back/admin/CompraDetalle_view', [], true)
+ 5 APPPATH\Controllers\Carrito_controller.php(122): view('back/admin/CompraDetalle_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Carrito_controller->ListCompraDetalle('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-01 01:17:01 --> ErrorException: Undefined array key "nombre"
+in APPPATH\Views\back\admin\CompraDetalle_view.php on line 36.
+ 1 APPPATH\Views\back\admin\CompraDetalle_view.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\admin\\CompraDetalle_view.php', 36)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\admin\\CompraDetalle_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('back/admin/CompraDetalle_view', [], true)
+ 5 APPPATH\Controllers\Carrito_controller.php(122): view('back/admin/CompraDetalle_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Carrito_controller->ListCompraDetalle('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-01 01:24:46 --> ErrorException: Undefined variable $ventas
+in APPPATH\Controllers\Carrito_controller.php on line 114.
+ 1 APPPATH\Controllers\Carrito_controller.php(114): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ventas', 'C:\\xampp\\htdocs\\fernandez_oscar\\app\\Controllers\\Carrito_controller.php', 114)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Carrito_controller->ListCompraDetalle('1')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-01 02:08:18 --> ErrorException: Undefined array key "telefono"
+in APPPATH\Views\back\usuario\editoMisDatos_view.php on line 61.
+ 1 APPPATH\Views\back\usuario\editoMisDatos_view.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "telefono"', 'C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\usuario\\editoMisDatos_view.php', 61)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\usuario\\editoMisDatos_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('back/usuario/editoMisDatos_view', [], true)
+ 5 APPPATH\Controllers\Datatable_controller.php(41): view('back/usuario/editoMisDatos_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Datatable_controller->editoMisDatos('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Datatable_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-01 02:09:49 --> ErrorException: Undefined array key "id"
+in APPPATH\Views\back\usuario\editoMisDatos_view.php on line 75.
+ 1 APPPATH\Views\back\usuario\editoMisDatos_view.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\usuario\\editoMisDatos_view.php', 75)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\usuario\\editoMisDatos_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('back/usuario/editoMisDatos_view', [], true)
+ 5 APPPATH\Controllers\Datatable_controller.php(41): view('back/usuario/editoMisDatos_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Datatable_controller->editoMisDatos('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Datatable_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-01 02:27:37 --> ErrorException: Undefined variable $id_usuario
+in APPPATH\Views\back\admin\CompraDetalle_view.php on line 13.
+ 1 APPPATH\Views\back\admin\CompraDetalle_view.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_usuario', 'C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\admin\\CompraDetalle_view.php', 13)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\admin\\CompraDetalle_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('back/admin/CompraDetalle_view', [], true)
+ 5 APPPATH\Controllers\Carrito_controller.php(137): view('back/admin/CompraDetalle_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Carrito_controller->ListCompraDetalle('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-01 02:36:33 --> mysqli_sql_exception: Unknown column 'c.id' in 'on clause' in C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `a`.`id`...', 0)
+#1 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`id`...')
+#2 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`id`...')
+#3 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`id`...', Array, false)
+#4 C:\xampp\htdocs\fernandez_oscar\app\Controllers\Carrito_controller.php(343): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(941): App\Controllers\Carrito_controller->FacturaCliente('1')
+#6 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+#7 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\fernandez_oscar\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-07-01 02:36:33 --> Error: Call to a member function getResultArray() on bool
+in APPPATH\Controllers\Carrito_controller.php on line 344.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Carrito_controller->FacturaCliente('1')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-01 02:48:04 --> ErrorException: Undefined array key "id"
+in APPPATH\Views\back\admin\facturacion_view.php on line 95.
+ 1 APPPATH\Views\back\admin\facturacion_view.php(95): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\admin\\facturacion_view.php', 95)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\admin\\facturacion_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('back/Admin/facturacion_view', [], true)
+ 5 APPPATH\Controllers\Carrito_controller.php(361): view('back/Admin/facturacion_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Carrito_controller->FacturaCliente('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-01 12:52:58 --> ErrorException: Undefined variable $titulo
+in APPPATH\Views\bienvenida.php on line 6.
+ 1 APPPATH\Views\bienvenida.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\bienvenida.php', 6)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\bienvenida.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('bienvenida', [], true)
+ 5 APPPATH\Controllers\panel_controller.php(42): view('bienvenida')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\panel_controller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\panel_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-01 13:23:11 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Result::numRows()
+in APPPATH\Controllers\Carrito_controller.php on line 44.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Carrito_controller->ListComprasCabecera()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

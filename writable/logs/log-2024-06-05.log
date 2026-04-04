@@ -1,0 +1,40 @@
+CRITICAL - 2024-06-05 09:35:59 --> Error: Call to a member function totalItems() on null
+in APPPATH\Views\panel.php on line 51.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('panel', [], true)
+ 4 APPPATH\Controllers\panel_controller.php(38): view('panel', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\panel_controller->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\panel_controller))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-05 18:54:05 --> Error: Call to a member function totalItems() on null
+in APPPATH\Views\panel.php on line 51.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('panel', [], true)
+ 4 APPPATH\Controllers\panel_controller.php(38): view('panel', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\panel_controller->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\panel_controller))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-05 19:02:46 --> Error: Call to a member function totalItems() on null
+in APPPATH\Views\panel.php on line 51.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('panel', [], true)
+ 4 APPPATH\Controllers\panel_controller.php(38): view('panel', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\panel_controller->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\panel_controller))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-05 19:17:11 --> Error: Call to a member function totalItems() on null
+in APPPATH\Views\panel.php on line 54.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('panel', [], true)
+ 4 APPPATH\Controllers\panel_controller.php(38): view('panel', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\panel_controller->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\panel_controller))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

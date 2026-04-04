@@ -1,0 +1,21 @@
+CRITICAL - 2026-01-08 17:49:43 --> ErrorException: Undefined array key "id"
+in APPPATH\Controllers\usuario_controller.php on line 133.
+ 1 APPPATH\Controllers\usuario_controller.php(133): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\fernandez_oscar\\app\\Controllers\\usuario_controller.php', 133)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\usuario_controller->formValidationEdit()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-01-08 17:52:52 --> ErrorException: Undefined array key "id"
+in APPPATH\Controllers\usuario_controller.php on line 133.
+ 1 APPPATH\Controllers\usuario_controller.php(133): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\fernandez_oscar\\app\\Controllers\\usuario_controller.php', 133)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\usuario_controller->formValidationEdit()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-01-08 17:55:26 --> ErrorException: Undefined array key "id"
+in APPPATH\Controllers\usuario_controller.php on line 133.
+ 1 APPPATH\Controllers\usuario_controller.php(133): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\fernandez_oscar\\app\\Controllers\\usuario_controller.php', 133)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\usuario_controller->formValidationEdit()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

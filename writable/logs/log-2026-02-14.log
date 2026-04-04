@@ -1,0 +1,9 @@
+CRITICAL - 2026-02-14 12:17:06 --> ParseError: syntax error, unexpected token "endforeach", expecting "elseif" or "else" or "endif"
+in APPPATH\Views\back\carrito\ProductosCart_view.php on line 137.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('back/carrito/ProductosCart_view', [], true)
+ 3 APPPATH\Controllers\producto_controller.php(92): view('back/carrito/ProductosCart_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Producto_controller->ProductosDisp()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

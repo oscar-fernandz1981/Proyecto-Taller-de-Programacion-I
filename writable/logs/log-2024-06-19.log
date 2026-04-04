@@ -1,0 +1,4 @@
+CRITICAL - 2024-06-19 00:52:28 --> ErrorException: Maximum execution time of 120 seconds exceeded
+in APPPATH\Views\bienvenida.php on line 1.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-06-19 00:57:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

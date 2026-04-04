@@ -1,0 +1,360 @@
+ERROR - 2024-06-30 01:34:18 --> mysqli_sql_exception: Unknown column 'd.telefono' in 'field list' in C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `u`.`id`...', 0)
+#1 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`id`...')
+#2 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`id`...')
+#3 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`id`...', Array, false)
+#4 C:\xampp\htdocs\fernandez_oscar\app\Controllers\Carrito_controller.php(65): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(941): App\Controllers\Carrito_controller->ListComprasCabeceraCliente('1')
+#6 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+#7 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\fernandez_oscar\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-06-30 01:34:18 --> Error: Call to a member function getResultArray() on bool
+in APPPATH\Controllers\Carrito_controller.php on line 77.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Carrito_controller->ListComprasCabeceraCliente('1')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-30 01:41:51 --> mysqli_sql_exception: Column 'usuario_id' cannot be null in C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ve...', 0)
+#1 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ve...')
+#2 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ve...')
+#3 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ve...', Array, false)
+#4 C:\xampp\htdocs\fernandez_oscar\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\fernandez_oscar\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\fernandez_oscar\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\fernandez_oscar\system\BaseModel.php(713): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\fernandez_oscar\app\Controllers\Carrito_controller.php(209): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(941): App\Controllers\Carrito_controller->guarda_compra()
+#10 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+#11 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\fernandez_oscar\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2024-06-30 01:41:52 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`fernandez_oscar`.`ventas_detalle`, CONSTRAINT `ventas_detalle_ibfk_1` FOREIGN KEY (`venta_id`) REFERENCES `ventas_cabecera` (`id`)) in C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ve...', 0)
+#1 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ve...')
+#2 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ve...')
+#3 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ve...', Array, false)
+#4 C:\xampp\htdocs\fernandez_oscar\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\fernandez_oscar\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\fernandez_oscar\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\fernandez_oscar\system\BaseModel.php(713): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\fernandez_oscar\app\Controllers\Carrito_controller.php(225): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(941): App\Controllers\Carrito_controller->guarda_compra()
+#10 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+#11 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\fernandez_oscar\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2024-06-30 01:41:52 --> Error: Class "App\Controllers\Productos_model" not found
+in APPPATH\Controllers\Carrito_controller.php on line 230.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Carrito_controller->guarda_compra()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-30 01:46:52 --> mysqli_sql_exception: Column 'usuario_id' cannot be null in C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ve...', 0)
+#1 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ve...')
+#2 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ve...')
+#3 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ve...', Array, false)
+#4 C:\xampp\htdocs\fernandez_oscar\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\fernandez_oscar\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\fernandez_oscar\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\fernandez_oscar\system\BaseModel.php(713): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\fernandez_oscar\app\Controllers\Carrito_controller.php(209): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(941): App\Controllers\Carrito_controller->guarda_compra()
+#10 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+#11 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\fernandez_oscar\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2024-06-30 01:46:53 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`fernandez_oscar`.`ventas_detalle`, CONSTRAINT `ventas_detalle_ibfk_1` FOREIGN KEY (`venta_id`) REFERENCES `ventas_cabecera` (`id`)) in C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ve...', 0)
+#1 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ve...')
+#2 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ve...')
+#3 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ve...', Array, false)
+#4 C:\xampp\htdocs\fernandez_oscar\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\fernandez_oscar\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\fernandez_oscar\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\fernandez_oscar\system\BaseModel.php(713): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\fernandez_oscar\app\Controllers\Carrito_controller.php(225): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(941): App\Controllers\Carrito_controller->guarda_compra()
+#10 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+#11 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\fernandez_oscar\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2024-06-30 01:46:55 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`fernandez_oscar`.`ventas_detalle`, CONSTRAINT `ventas_detalle_ibfk_1` FOREIGN KEY (`venta_id`) REFERENCES `ventas_cabecera` (`id`)) in C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ve...', 0)
+#1 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ve...')
+#2 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ve...')
+#3 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ve...', Array, false)
+#4 C:\xampp\htdocs\fernandez_oscar\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\fernandez_oscar\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\fernandez_oscar\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\fernandez_oscar\system\BaseModel.php(713): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\fernandez_oscar\app\Controllers\Carrito_controller.php(225): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(941): App\Controllers\Carrito_controller->guarda_compra()
+#10 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+#11 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\fernandez_oscar\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2024-06-30 01:46:56 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "nav_view.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('nav_view.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('nav_view', [], true)
+ 3 APPPATH\Controllers\Carrito_controller.php(259): view('nav_view')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Carrito_controller->GraciasPorSuCompra()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-30 01:47:11 --> mysqli_sql_exception: Column 'usuario_id' cannot be null in C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ve...', 0)
+#1 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ve...')
+#2 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ve...')
+#3 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ve...', Array, false)
+#4 C:\xampp\htdocs\fernandez_oscar\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\fernandez_oscar\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\fernandez_oscar\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\fernandez_oscar\system\BaseModel.php(713): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\fernandez_oscar\app\Controllers\Carrito_controller.php(209): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(941): App\Controllers\Carrito_controller->guarda_compra()
+#10 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+#11 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\fernandez_oscar\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2024-06-30 01:47:11 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "nav_view.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('nav_view.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('nav_view', [], true)
+ 3 APPPATH\Controllers\Carrito_controller.php(259): view('nav_view')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Carrito_controller->GraciasPorSuCompra()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-30 01:48:25 --> mysqli_sql_exception: Column 'usuario_id' cannot be null in C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ve...', 0)
+#1 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ve...')
+#2 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ve...')
+#3 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ve...', Array, false)
+#4 C:\xampp\htdocs\fernandez_oscar\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\fernandez_oscar\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\fernandez_oscar\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\fernandez_oscar\system\BaseModel.php(713): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\fernandez_oscar\app\Controllers\Carrito_controller.php(209): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(941): App\Controllers\Carrito_controller->guarda_compra()
+#10 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+#11 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\fernandez_oscar\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2024-06-30 01:48:26 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "panek.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('panek.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('panek', [], true)
+ 3 APPPATH\Controllers\Carrito_controller.php(259): view('panek')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Carrito_controller->GraciasPorSuCompra()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-30 01:49:05 --> mysqli_sql_exception: Column 'usuario_id' cannot be null in C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ve...', 0)
+#1 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ve...')
+#2 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ve...')
+#3 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ve...', Array, false)
+#4 C:\xampp\htdocs\fernandez_oscar\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\fernandez_oscar\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\fernandez_oscar\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\fernandez_oscar\system\BaseModel.php(713): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\fernandez_oscar\app\Controllers\Carrito_controller.php(209): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(941): App\Controllers\Carrito_controller->guarda_compra()
+#10 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+#11 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\fernandez_oscar\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2024-06-30 01:49:17 --> mysqli_sql_exception: Unknown column 'd.telefono' in 'field list' in C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `u`.`id`...', 0)
+#1 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`id`...')
+#2 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`id`...')
+#3 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`id`...', Array, false)
+#4 C:\xampp\htdocs\fernandez_oscar\app\Controllers\Carrito_controller.php(65): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(941): App\Controllers\Carrito_controller->ListComprasCabeceraCliente('1')
+#6 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+#7 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\fernandez_oscar\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-06-30 01:49:17 --> Error: Call to a member function getResultArray() on bool
+in APPPATH\Controllers\Carrito_controller.php on line 77.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Carrito_controller->ListComprasCabeceraCliente('1')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-30 02:18:22 --> mysqli_sql_exception: Unknown column 'd.telefono' in 'field list' in C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `u`.`id`...', 0)
+#1 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`id`...')
+#2 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`id`...')
+#3 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`id`...', Array, false)
+#4 C:\xampp\htdocs\fernandez_oscar\app\Controllers\Carrito_controller.php(75): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(941): App\Controllers\Carrito_controller->ListComprasCabeceraCliente('1')
+#6 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+#7 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\fernandez_oscar\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2024-06-30 02:31:49 --> mysqli_sql_exception: Unknown column 'd.telefono' in 'field list' in C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `u`.`id`...', 0)
+#1 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`id`...')
+#2 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`id`...')
+#3 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`id`...', Array, false)
+#4 C:\xampp\htdocs\fernandez_oscar\app\Controllers\Carrito_controller.php(76): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(941): App\Controllers\Carrito_controller->ListComprasCabeceraCliente('1')
+#6 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+#7 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\fernandez_oscar\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2024-06-30 02:34:26 --> mysqli_sql_exception: Unknown column 'd.id' in 'on clause' in C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `u`.`id`...', 0)
+#1 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`id`...')
+#2 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`id`...')
+#3 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`id`...', Array, false)
+#4 C:\xampp\htdocs\fernandez_oscar\app\Controllers\Carrito_controller.php(76): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(941): App\Controllers\Carrito_controller->ListComprasCabeceraCliente('1')
+#6 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+#7 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\fernandez_oscar\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-06-30 02:35:58 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Result::numRows()
+in APPPATH\Controllers\Carrito_controller.php on line 86.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Carrito_controller->ListComprasCabeceraCliente('1')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-30 02:41:01 --> mysqli_sql_exception: Column 'usuario_id' cannot be null in C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ve...', 0)
+#1 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ve...')
+#2 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ve...')
+#3 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ve...', Array, false)
+#4 C:\xampp\htdocs\fernandez_oscar\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\fernandez_oscar\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\fernandez_oscar\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\fernandez_oscar\system\BaseModel.php(713): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\fernandez_oscar\app\Controllers\Carrito_controller.php(223): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(941): App\Controllers\Carrito_controller->guarda_compra()
+#10 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+#11 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\fernandez_oscar\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2024-06-30 02:41:04 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`fernandez_oscar`.`ventas_detalle`, CONSTRAINT `ventas_detalle_ibfk_1` FOREIGN KEY (`venta_id`) REFERENCES `ventas_cabecera` (`id`)) in C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ve...', 0)
+#1 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ve...')
+#2 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ve...')
+#3 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ve...', Array, false)
+#4 C:\xampp\htdocs\fernandez_oscar\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\fernandez_oscar\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\fernandez_oscar\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\fernandez_oscar\system\BaseModel.php(713): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\fernandez_oscar\app\Controllers\Carrito_controller.php(239): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(941): App\Controllers\Carrito_controller->guarda_compra()
+#10 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+#11 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\fernandez_oscar\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2024-06-30 02:41:09 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`fernandez_oscar`.`ventas_detalle`, CONSTRAINT `ventas_detalle_ibfk_1` FOREIGN KEY (`venta_id`) REFERENCES `ventas_cabecera` (`id`)) in C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ve...', 0)
+#1 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ve...')
+#2 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ve...')
+#3 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ve...', Array, false)
+#4 C:\xampp\htdocs\fernandez_oscar\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\fernandez_oscar\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\fernandez_oscar\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\fernandez_oscar\system\BaseModel.php(713): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\fernandez_oscar\app\Controllers\Carrito_controller.php(239): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(941): App\Controllers\Carrito_controller->guarda_compra()
+#10 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+#11 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\fernandez_oscar\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2024-06-30 02:57:56 --> An invalid name was submitted as the product name:  The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+CRITICAL - 2024-06-30 02:58:37 --> ErrorException: Undefined array key "id_producto"
+in APPPATH\Controllers\Carrito_controller.php on line 245.
+ 1 APPPATH\Controllers\Carrito_controller.php(245): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_producto"', 'C:\\xampp\\htdocs\\fernandez_oscar\\app\\Controllers\\Carrito_controller.php', 245)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Carrito_controller->guarda_compra()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-30 17:37:12 --> An invalid name was submitted as the product name:  The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+ERROR - 2024-06-30 17:37:19 --> An invalid name was submitted as the product name:  The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+ERROR - 2024-06-30 17:39:28 --> mysqli_sql_exception: Unknown column 'd.id' in 'field list' in C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `d`.`id`...', 0)
+#1 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `d`.`id`...')
+#2 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `d`.`id`...')
+#3 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `d`.`id`...', Array, false)
+#4 C:\xampp\htdocs\fernandez_oscar\app\Controllers\Carrito_controller.php(110): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(941): App\Controllers\Carrito_controller->ListCompraDetalle('1')
+#6 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+#7 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\fernandez_oscar\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-06-30 17:39:28 --> Error: Call to a member function getResultArray() on bool
+in APPPATH\Controllers\Carrito_controller.php on line 111.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Carrito_controller->ListCompraDetalle('1')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-30 17:40:24 --> mysqli_sql_exception: Unknown column 'd.id' in 'field list' in C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `d`.`id`...', 0)
+#1 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `d`.`id`...')
+#2 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `d`.`id`...')
+#3 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `d`.`id`...', Array, false)
+#4 C:\xampp\htdocs\fernandez_oscar\app\Controllers\Carrito_controller.php(110): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(941): App\Controllers\Carrito_controller->ListCompraDetalle('1')
+#6 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+#7 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\fernandez_oscar\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-06-30 17:40:24 --> Error: Call to a member function getResultArray() on bool
+in APPPATH\Controllers\Carrito_controller.php on line 111.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Carrito_controller->ListCompraDetalle('1')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-30 22:48:07 --> Error: Class "Kint\Renderer\AbstractRenderer" not found
+in SYSTEMPATH\Config\Factories.php on line 218.
+ 1 SYSTEMPATH\Config\Factories.php(168): CodeIgniter\Config\Factories::createInstance('config', 'Config\\Kint', [])
+ 2 SYSTEMPATH\Common.php(215): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 3 SYSTEMPATH\CodeIgniter.php(299): config('Config\\Kint')
+ 4 SYSTEMPATH\CodeIgniter.php(265): CodeIgniter\CodeIgniter->configureKint()
+ 5 SYSTEMPATH\CodeIgniter.php(223): CodeIgniter\CodeIgniter->initializeKint()
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->initialize()
+ERROR - 2024-06-30 23:40:04 --> An invalid name was submitted as the product name:  The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+ERROR - 2024-06-30 23:55:52 --> mysqli_sql_exception: Unknown column 'd.id' in 'field list' in C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `d`.`id`...', 0)
+#1 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `d`.`id`...')
+#2 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `d`.`id`...')
+#3 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `d`.`id`...', Array, false)
+#4 C:\xampp\htdocs\fernandez_oscar\app\Controllers\Carrito_controller.php(110): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(941): App\Controllers\Carrito_controller->ListCompraDetalle('1')
+#6 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+#7 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\fernandez_oscar\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-06-30 23:55:52 --> Error: Call to a member function getResultArray() on bool
+in APPPATH\Controllers\Carrito_controller.php on line 111.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Carrito_controller->ListCompraDetalle('1')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,10 @@
+INFO - 2024-06-22 10:55:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-22 11:00:28 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "nav_view.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('nav_view.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('nav_view', [], true)
+ 3 APPPATH\Controllers\Contactocontroller.php(81): view('nav_view')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Contactocontroller->Datos_consultasResueltas()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contactocontroller))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

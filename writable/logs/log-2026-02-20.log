@@ -1,0 +1,76 @@
+CRITICAL - 2026-02-20 22:54:11 --> ParseError: Unclosed '{' on line 9
+in APPPATH\Controllers\Carrito_controller.php on line 718.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\fernandez_oscar\\app\\Controllers\\Carrito_controller.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Carrito_controller')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Carrito_controller')
+ 4 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\Carrito_controller', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-02-20 22:54:24 --> ParseError: Unclosed '{' on line 9
+in APPPATH\Controllers\Carrito_controller.php on line 718.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\fernandez_oscar\\app\\Controllers\\Carrito_controller.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Carrito_controller')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Carrito_controller')
+ 4 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\Carrito_controller', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-02-20 23:01:09 --> ErrorException: Undefined variable $rowid
+in APPPATH\Controllers\Carrito_controller.php on line 258.
+ 1 APPPATH\Controllers\Carrito_controller.php(258): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $rowid', 'C:\\xampp\\htdocs\\fernandez_oscar\\app\\Controllers\\Carrito_controller.php', 258)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Carrito_controller->actualiza_carrito()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-02-20 23:01:25 --> ErrorException: Undefined variable $rowid
+in APPPATH\Controllers\Carrito_controller.php on line 258.
+ 1 APPPATH\Controllers\Carrito_controller.php(258): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $rowid', 'C:\\xampp\\htdocs\\fernandez_oscar\\app\\Controllers\\Carrito_controller.php', 258)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Carrito_controller->actualiza_carrito()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-02-20 23:04:17 --> ErrorException: Undefined variable $rowid
+in APPPATH\Controllers\Carrito_controller.php on line 258.
+ 1 APPPATH\Controllers\Carrito_controller.php(258): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $rowid', 'C:\\xampp\\htdocs\\fernandez_oscar\\app\\Controllers\\Carrito_controller.php', 258)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Carrito_controller->actualiza_carrito()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2026-02-20 23:24:27 --> mysqli_sql_exception: Column 'tipo_pago' cannot be null in C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ve...', 0)
+#1 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ve...')
+#2 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ve...')
+#3 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ve...', Array, false)
+#4 C:\xampp\htdocs\fernandez_oscar\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\fernandez_oscar\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\fernandez_oscar\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\fernandez_oscar\app\Controllers\Carrito_controller.php(423): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(941): App\Controllers\Carrito_controller->guarda_compra()
+#9 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+#10 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\fernandez_oscar\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2026-02-20 23:43:39 --> ErrorException: Undefined variable $cabecera_model
+in APPPATH\Controllers\Carrito_controller.php on line 411.
+ 1 APPPATH\Controllers\Carrito_controller.php(411): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cabecera_model', 'C:\\xampp\\htdocs\\fernandez_oscar\\app\\Controllers\\Carrito_controller.php', 411)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Carrito_controller->guarda_compra()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2026-02-20 23:48:45 --> mysqli_sql_exception: Column 'tipo_pago' cannot be null in C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ve...', 0)
+#1 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ve...')
+#2 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ve...')
+#3 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ve...', Array, false)
+#4 C:\xampp\htdocs\fernandez_oscar\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\fernandez_oscar\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\fernandez_oscar\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\fernandez_oscar\app\Controllers\Carrito_controller.php(705): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(941): App\Controllers\Carrito_controller->guarda_compra()
+#9 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+#10 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\fernandez_oscar\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}

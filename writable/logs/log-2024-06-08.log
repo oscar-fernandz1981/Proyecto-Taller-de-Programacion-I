@@ -1,0 +1,33 @@
+CRITICAL - 2024-06-08 23:12:20 --> ErrorException: Undefined variable $titulo
+in APPPATH\Views\header.php on line 9.
+ 1 APPPATH\Views\header.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\header.php', 9)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\header.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('header', [], true)
+ 5 APPPATH\Controllers\panel_controller.php(40): view('header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\panel_controller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\panel_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-08 23:17:08 --> ErrorException: Undefined variable $titulo
+in APPPATH\Views\header.php on line 9.
+ 1 APPPATH\Views\header.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\header.php', 9)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\header.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('header', [], true)
+ 5 APPPATH\Controllers\panel_controller.php(40): view('header')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\panel_controller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\panel_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-08 23:19:44 --> ErrorException: Undefined variable $titulo
+in APPPATH\Views\header.php on line 9.
+ 1 APPPATH\Views\header.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\header.php', 9)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\header.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('header', [], true)
+ 5 APPPATH\Controllers\panel_controller.php(40): view('header')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\panel_controller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\panel_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

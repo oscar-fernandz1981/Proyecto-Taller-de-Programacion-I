@@ -1,0 +1,65 @@
+ERROR - 2024-05-29 00:57:19 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'oscar' in C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'oscar', 3306, '', 0)
+#1 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\fernandez_oscar\system\Validation\StrictRules\Rules.php(227): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\fernandez_oscar\system\Validation\Validation.php(328): CodeIgniter\Validation\StrictRules\Rules->is_unique('joselo@correo.c...', 'email', Array, NULL, 'email')
+#6 C:\xampp\htdocs\fernandez_oscar\system\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('email', 'email', 'joselo@correo.c...', Array, Array)
+#7 C:\xampp\htdocs\fernandez_oscar\system\Controller.php(152): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\fernandez_oscar\app\Controllers\usuario_controller.php(24): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(941): App\Controllers\usuario_controller->formValidation()
+#10 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario_controller))
+#11 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\fernandez_oscar\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'oscar' in C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\fernandez_oscar\system\Validation\StrictRules\Rules.php(227): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\fernandez_oscar\system\Validation\Validation.php(328): CodeIgniter\Validation\StrictRules\Rules->is_unique('joselo@correo.c...', 'email', Array, NULL, 'email')
+#5 C:\xampp\htdocs\fernandez_oscar\system\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('email', 'email', 'joselo@correo.c...', Array, Array)
+#6 C:\xampp\htdocs\fernandez_oscar\system\Controller.php(152): CodeIgniter\Validation\Validation->run()
+#7 C:\xampp\htdocs\fernandez_oscar\app\Controllers\usuario_controller.php(24): CodeIgniter\Controller->validate(Array)
+#8 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(941): App\Controllers\usuario_controller->formValidation()
+#9 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario_controller))
+#10 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\fernandez_oscar\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-05-29 00:57:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'oscar'
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `usuarios`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(227): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(328): CodeIgniter\Validation\StrictRules\Rules->is_unique('joselo@correo.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('email', 'email', 'joselo@correo.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\usuario_controller.php(24): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\usuario_controller->formValidation()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario_controller))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-29 01:52:50 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`fernandez_oscar`.`usuarios`, CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`perfil_id`) REFERENCES `perfiles` (`id_perfiles`)) in C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\fernandez_oscar\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\fernandez_oscar\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\fernandez_oscar\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\fernandez_oscar\system\BaseModel.php(713): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\fernandez_oscar\app\Controllers\usuario_controller.php(47): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(941): App\Controllers\usuario_controller->formValidation()
+#10 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario_controller))
+#11 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\fernandez_oscar\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}

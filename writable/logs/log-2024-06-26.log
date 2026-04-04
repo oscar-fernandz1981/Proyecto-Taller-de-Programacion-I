@@ -1,0 +1,141 @@
+INFO - 2024-06-26 01:29:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-26 02:48:31 --> ErrorException: Undefined array key "name"
+in APPPATH\Views\DetalleConsulta_view.php on line 18.
+ 1 APPPATH\Views\DetalleConsulta_view.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\DetalleConsulta_view.php', 18)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\DetalleConsulta_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('DetalleConsulta_view', [], true)
+ 5 APPPATH\Controllers\Contactocontroller.php(38): view('DetalleConsulta_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Contactocontroller->ConsultaDetalle('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contactocontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 02:49:46 --> ErrorException: Undefined array key "name"
+in APPPATH\Views\DetalleConsulta_view.php on line 18.
+ 1 APPPATH\Views\DetalleConsulta_view.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\DetalleConsulta_view.php', 18)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\DetalleConsulta_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('DetalleConsulta_view', [], true)
+ 5 APPPATH\Controllers\Contactocontroller.php(38): view('DetalleConsulta_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Contactocontroller->ConsultaDetalle('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contactocontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 02:51:19 --> ErrorException: Undefined array key "name"
+in APPPATH\Views\DetalleConsulta_view.php on line 18.
+ 1 APPPATH\Views\DetalleConsulta_view.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\DetalleConsulta_view.php', 18)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\DetalleConsulta_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('DetalleConsulta_view', [], true)
+ 5 APPPATH\Controllers\Contactocontroller.php(38): view('DetalleConsulta_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Contactocontroller->ConsultaDetalle('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contactocontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 02:53:47 --> ErrorException: Undefined array key "name"
+in APPPATH\Views\DetalleConsulta_view.php on line 18.
+ 1 APPPATH\Views\DetalleConsulta_view.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\DetalleConsulta_view.php', 18)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\DetalleConsulta_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('DetalleConsulta_view', [], true)
+ 5 APPPATH\Controllers\Contactocontroller.php(38): view('DetalleConsulta_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Contactocontroller->ConsultaDetalle('2')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contactocontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 19:19:12 --> ErrorException: Undefined array key "nombre"
+in APPPATH\Views\back\carrito\ProductosCart_view.php on line 37.
+ 1 APPPATH\Views\back\carrito\ProductosCart_view.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\carrito\\ProductosCart_view.php', 37)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\carrito\\ProductosCart_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('back/carrito/ProductosCart_view', [], true)
+ 5 APPPATH\Controllers\producto_controller.php(92): view('back/carrito/ProductosCart_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Producto_controller->ProductosDisp()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 19:52:07 --> ErrorException: Undefined array key "id"
+in APPPATH\Views\back\carrito\ProductosCart_view.php on line 91.
+ 1 APPPATH\Views\back\carrito\ProductosCart_view.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\carrito\\ProductosCart_view.php', 91)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\carrito\\ProductosCart_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('back/carrito/ProductosCart_view', [], true)
+ 5 APPPATH\Controllers\producto_controller.php(92): view('back/carrito/ProductosCart_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Producto_controller->ProductosDisp()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 19:53:19 --> ErrorException: Undefined array key "nombre"
+in APPPATH\Views\back\carrito\ProductosCart_view.php on line 92.
+ 1 APPPATH\Views\back\carrito\ProductosCart_view.php(92): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\carrito\\ProductosCart_view.php', 92)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\carrito\\ProductosCart_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('back/carrito/ProductosCart_view', [], true)
+ 5 APPPATH\Controllers\producto_controller.php(92): view('back/carrito/ProductosCart_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Producto_controller->ProductosDisp()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 19:54:28 --> ErrorException: Undefined array key "nombre"
+in APPPATH\Views\back\carrito\DetalleProducto_view.php on line 23.
+ 1 APPPATH\Views\back\carrito\DetalleProducto_view.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\carrito\\DetalleProducto_view.php', 23)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\carrito\\DetalleProducto_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('back/carrito/DetalleProducto_view', [], true)
+ 5 APPPATH\Controllers\producto_controller.php(113): view('back/carrito/DetalleProducto_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Producto_controller->ProductoDetalle('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 20:14:05 --> ErrorException: Undefined array key "nombre_producto"
+in APPPATH\Views\back\carrito\DetalleProducto_view.php on line 23.
+ 1 APPPATH\Views\back\carrito\DetalleProducto_view.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre_producto"', 'C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\carrito\\DetalleProducto_view.php', 23)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\carrito\\DetalleProducto_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('back/carrito/DetalleProducto_view', [], true)
+ 5 APPPATH\Controllers\producto_controller.php(113): view('back/carrito/DetalleProducto_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Producto_controller->ProductoDetalle('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 20:15:01 --> ErrorException: Undefined array key "descripcion"
+in APPPATH\Views\back\carrito\DetalleProducto_view.php on line 33.
+ 1 APPPATH\Views\back\carrito\DetalleProducto_view.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "descripcion"', 'C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\carrito\\DetalleProducto_view.php', 33)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\carrito\\DetalleProducto_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('back/carrito/DetalleProducto_view', [], true)
+ 5 APPPATH\Controllers\producto_controller.php(113): view('back/carrito/DetalleProducto_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Producto_controller->ProductoDetalle('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 20:19:16 --> ErrorException: Undefined array key "id"
+in APPPATH\Views\back\carrito\DetalleProducto_view.php on line 97.
+ 1 APPPATH\Views\back\carrito\DetalleProducto_view.php(97): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\carrito\\DetalleProducto_view.php', 97)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\carrito\\DetalleProducto_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('back/carrito/DetalleProducto_view', [], true)
+ 5 APPPATH\Controllers\producto_controller.php(113): view('back/carrito/DetalleProducto_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Producto_controller->ProductoDetalle('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 20:23:35 --> Error: Call to a member function insert() on null
+in APPPATH\Controllers\Carrito_controller.php on line 110.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Carrito_controller->add()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-26 23:30:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-26 23:33:07 --> Error: Call to a member function insert() on null
+in APPPATH\Controllers\Carrito_controller.php on line 110.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Carrito_controller->add()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 23:40:39 --> Error: Call to a member function insert() on null
+in APPPATH\Controllers\Carrito_controller.php on line 110.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Carrito_controller->add()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

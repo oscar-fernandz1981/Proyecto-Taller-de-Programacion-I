@@ -1,0 +1,62 @@
+CRITICAL - 2024-06-16 00:38:19 --> Error: Class "App\Controllers\Productos_model" not found
+in APPPATH\Controllers\producto_controller.php on line 71.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Producto_controller->ListaProductos()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-16 00:41:03 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "back/Admin/Productos_view.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('back/Admin/Productos_view.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('back/Admin/Productos_view', [], true)
+ 3 APPPATH\Controllers\producto_controller.php(78): view('back/Admin/Productos_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Producto_controller->ListaProductos()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-16 01:14:32 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "back/Admin/nuevoProducto_view.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('back/Admin/nuevoProducto_view.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('back/Admin/nuevoProducto_view', [], true)
+ 3 APPPATH\Controllers\producto_controller.php(21): view('back/Admin/nuevoProducto_view')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Producto_controller->nuevoProducto()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-16 10:33:13 --> Error: Class "App\Models\Usuarios_model" not found
+in APPPATH\Controllers\Datatable_controller.php on line 10.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Datatable_controller->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Datatable_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-16 10:35:18 --> Error: Class "App\Controllers\usuario_Model" not found
+in APPPATH\Controllers\Datatable_controller.php on line 10.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Datatable_controller->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Datatable_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-16 10:36:07 --> ErrorException: Undefined array key "id"
+in APPPATH\Views\back\usuario\usuarios_view.php on line 51.
+ 1 APPPATH\Views\back\usuario\usuarios_view.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\usuario\\usuarios_view.php', 51)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\back\\usuario\\usuarios_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('back/usuario/usuarios_view', [], true)
+ 5 APPPATH\Controllers\Datatable_controller.php(17): view('back/usuario/usuarios_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Datatable_controller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Datatable_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-16 13:37:15 --> Error: Class "App\Controllers\Usuarios_model" not found
+in APPPATH\Controllers\usuario_controller.php on line 61.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\usuario_controller->usuariosEliminados()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-16 13:38:02 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "back/admin/listUs_Eliminados_view.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('back/admin/listUs_Eliminados_view.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('back/admin/listUs_Eliminados_view', [], true)
+ 3 APPPATH\Controllers\usuario_controller.php(67): view('back/admin/listUs_Eliminados_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\usuario_controller->usuariosEliminados()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

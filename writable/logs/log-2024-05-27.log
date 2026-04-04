@@ -1,0 +1,3 @@
+CRITICAL - 2024-05-27 01:00:55 --> ErrorException: Maximum execution time of 120 seconds exceeded
+in SYSTEMPATH\ThirdParty\Escaper\Escaper.php on line 413.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
