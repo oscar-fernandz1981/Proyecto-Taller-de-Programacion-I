@@ -15,113 +15,90 @@ class Carrito_controller extends Controller{
     // ********************************************
     // *** 1. MÉTODO DE REPORTES (NUEVO) **********
     // ********************************************
-    public function mostrar_reportes()
-    {
-        $db = db_connect();
-        $request = \Config\Services::request();
-        
-        $ventas_periodo = [];
+    public function mostrar_reportes() {
+    $db = db_connect();
+    $request = \Config\Services::request();
+    
+    $fechaDesde = $request->getGet('fecha_desde');
+    $fechaHasta = $request->getGet('fecha_hasta');
+    
+    $data_grafico_productos = [];
+    $data_grafico_pagos = [];
 
-        // Obtener las fechas de filtro desde la URL (método GET)
-        $fechaDesde = $request->getGet('fecha_desde');
-        $fechaHasta = $request->getGet('fecha_hasta');
-        
-        // Si se enviaron las fechas, realizar la consulta
-        if ($fechaDesde && $fechaHasta) {
-            
-            $builder = $db->table('ventas_cabecera vc');
-            
-            // Seleccionar los campos necesarios para la tabla de reportes
-            $builder->select('vc.fecha, u.nombre as cliente_nombre, u.apellido as cliente_apellido, p.nombre_prod as producto_nombre, vd.cantidad, vd.precio, vd.total');
-            
-            // Unir la cabecera con el detalle
-            $builder->join('ventas_detalle vd', 'vd.venta_id = vc.id');
-            // Unir el detalle con los productos
-            $builder->join('productos p', 'p.id_producto = vd.producto_id');
-            // Unir la cabecera con los usuarios
-            $builder->join('usuarios u', 'u.id_usuario = vc.usuario_id');
-            
-            // Aplicar el filtro de rango de fechas
-            $builder->where('vc.fecha >=', $fechaDesde); 
-            $builder->where('vc.fecha <=', $fechaHasta); 
-            
-            $builder->orderBy('vc.fecha', 'DESC');
+    if ($fechaDesde && $fechaHasta) {
+        // 1. Datos para Gráfico de Productos (Agrupado por Categoría)
+        $builderProd = $db->table('ventas_detalle vd');
+        $builderProd->select('p.categoria_id, SUM(vd.cantidad) as total_vendido');
+        $builderProd->join('productos p', 'p.id_producto = vd.producto_id');
+        $builderProd->join('ventas_cabecera vc', 'vc.id = vd.venta_id');
+        $builderProd->where('vc.fecha >=', $fechaDesde);
+        $builderProd->where('vc.fecha <=', $fechaHasta);
+        $builderProd->groupBy('p.categoria_id');
+        $data_grafico_productos = $builderProd->get()->getResultArray();
 
-            $query = $builder->get();
-            $ventas_periodo = $query->getResultArray();
-            
-            // Ajustar el nombre del cliente para la vista
-            foreach ($ventas_periodo as $key => $venta) {
-                $ventas_periodo[$key]['cliente_nombre'] = $venta['cliente_nombre'] . ' ' . $venta['cliente_apellido'];
-            }
-        }
-        
-        $dato['titulo'] = 'Reportes Detallados de Venta';
-        $dato['ventas_periodo'] = $ventas_periodo; // Pasar los datos a la vista
-
-
-
-        $dato['fecha_desde'] = $fechaDesde;
-        $dato['fecha_hasta'] = $fechaHasta;
-        // Cargar las vistas
-        echo view('header',$dato); 
-        echo view('panel');
-        echo view('back/admin/reportes_view', $dato); // Pasar la variable $dato
-        echo view('footer2');
+        // 2. Datos para Gráfico de Formas de Pago
+        $builderPago = $db->table('ventas_cabecera vc');
+        $builderPago->select('vc.tipo_pago, COUNT(vc.id) as cantidad');
+        $builderPago->where('vc.fecha >=', $fechaDesde);
+        $builderPago->where('vc.fecha <=', $fechaHasta);
+        $builderPago->groupBy('vc.tipo_pago');
+        $data_grafico_pagos = $builderPago->get()->getResultArray();
     }
+
+    $dato['titulo'] = 'Panel de Estadísticas';
+    $dato['prod_stats'] = $data_grafico_productos;
+    $dato['pago_stats'] = $data_grafico_pagos;
+    $dato['fecha_desde'] = $fechaDesde;
+    $dato['fecha_hasta'] = $fechaHasta;
+
+    echo view('header', $dato); 
+    echo view('panel');
+    echo view('back/admin/reportes_view', $dato);
+    echo view('footer');
+}
 
     // ********************************************
     // *** 2. MÉTODOS DE VISTAS Y LISTADOS ********
     // ********************************************
     
     // Rescata las ventas cabeceras y muestra (Admin)
-    public function ListComprasCabecera(){
-        $db = db_connect();
-        $builder = $db->table('ventas_cabecera u');
-        $builder->select('u.id , d.nombre , d.apellido, u.total_venta , u.fecha , u.tipo_pago');
-        $builder->join('usuarios d','u.usuario_id = d.id_usuario');
-        $query = $builder->get();
-
-        if ($query === false) {
-            $error = $db->error();
-            echo "Error en la consulta: " . $error['message'];
-            return;
-        }
-
-        $ventas = $query->getResultArray();
-        $datos['ventas'] = $ventas;
-        
-        $data['titulo']='Listado de Compras'; 
-        echo view('header',$data);
-        echo view('panel');
-        echo view('back/admin/ListaCompras_view',$datos);
-        echo view('footer2');
-    }
-
+    
     // Rescata las ventas cabeceras de este cliente y muestra.
-    public function ListComprasCabeceraCliente($id){
-        $db = db_connect();
-        $builder = $db->table('ventas_cabecera u');
-        $builder->where('usuario_id', $id);
-        $builder->select('u.id, d.nombre, d.apellido, u.total_venta, u.fecha, u.tipo_pago');
-        $builder->join('usuarios d', 'u.usuario_id = d.id_usuario');
-        $query = $builder->get();
+   public function ListComprasCabecera() {
+    $db = db_connect();
+    $request = \Config\Services::request();
+    
+    // Capturamos las fechas (si existen en el GET)
+    $fechaDesde = $request->getGet('fecha_desde');
+    $fechaHasta = $request->getGet('fecha_hasta');
 
-        if ($query === false) {
-            $error = $db->error();
-            echo "Error en la consulta: " . $error['message'];
-            return;
-        }
+    $builder = $db->table('ventas_cabecera u');
+    $builder->select('u.id, d.nombre, d.apellido, u.total_venta, u.fecha, u.tipo_pago');
+    $builder->join('usuarios d', 'u.usuario_id = d.id_usuario');
 
-        $ventas = $query->getResultArray();
-        $datos['ventas'] = $ventas;
-
-        $data['titulo'] = 'Listado de Compras';
-        echo view('header', $data);
-        echo view('panel');
-        echo view('back/admin/ListaCompras_view', $datos);
-        echo view('footer2');
+    // SOLO aplica el filtro si AMBAS fechas están presentes
+    // Esto garantiza que al entrar normalmente siga funcionando igual
+    if (!empty($fechaDesde) && !empty($fechaHasta)) {
+        $builder->where('u.fecha >=', $fechaDesde);
+        $builder->where('u.fecha <=', $fechaHasta);
     }
+
+    $query = $builder->get();
+    $ventas = ($query) ? $query->getResultArray() : [];
+
+    // Pasamos las fechas a la vista para que queden escritas en los inputs
+    $datos = [
+        'ventas'      => $ventas,
+        'fecha_desde' => $fechaDesde,
+        'fecha_hasta' => $fechaHasta
+    ];
+    
+    $data['titulo'] = 'Listado de Compras'; 
+    echo view('header', $data);
+    echo view('panel');
+    echo view('back/admin/ListaCompras_view', $datos);
+    echo view('footer');
+}
 
     // Muestra el detalle de una compra específica
     public function ListCompraDetalle($id){
@@ -146,7 +123,7 @@ class Carrito_controller extends Controller{
         echo view('header', $data);
         echo view('panel');
         echo view('back/admin/CompraDetalle_view', $datos);
-        echo view('footer2');
+        echo view('footer');
     }
 
     // Muestra los productos en el carrito
@@ -157,7 +134,7 @@ class Carrito_controller extends Controller{
         echo view('header',$data);
         echo view('panel');
         echo view('back/carrito/ProductosEnCarrito',$carrito);
-        echo view('footer2');
+        echo view('footer');
     }
 
     // Muestra la vista de confirmación de compra
@@ -168,19 +145,42 @@ class Carrito_controller extends Controller{
         echo view('header',$data);
         echo view('panel');
         echo view('back/carrito/compra');
-        echo view('footer2');
+        echo view('footer');
     }
 
-    /* Muestra la vista de agradecimiento
-    function GraciasPorSuCompra()
-    {
-        $data['titulo'] ='Confirmar Realizada';
 
-        echo view('header',$data);
-        echo view('panel');
-        echo view('back/carrito/GraciasCompra_view');
-        echo view('footer2');
-    }*/
+    public function ListComprasCabeceraCliente($id)
+{
+    $db = db_connect();
+    
+    // 1. Selección y Join corregidos
+    $builder = $db->table('ventas_cabecera u');
+    // Usamos id_usuario que es tu PK real en la tabla usuarios
+    $builder->join('usuarios d', 'u.usuario_id = d.id_usuario'); 
+    
+    // 2. Filtro por el ID del cliente que viene por la URL
+    $builder->where('u.usuario_id', $id);
+    
+    // 3. Campos necesarios
+    $builder->select('u.id, d.nombre, d.apellido, u.total_venta, u.fecha, u.tipo_pago');
+    
+    $query = $builder->get();
+    $datos['ventas'] = $query->getResultArray();
+    
+    // 4. Variables para la vista (agregamos fechas nulas para evitar errores en los inputs de filtro)
+    $datos['fecha_desde'] = null;
+    $datos['fecha_hasta'] = null;
+
+    $data['titulo'] = 'Mis Compras'; 
+    
+    // 5. Vistas (Cambié 'nav_view' por 'panel' que es lo que venís usando)
+    echo view('header', $data);
+    echo view('panel'); 
+    echo view('back/admin/ListaCompras_view', $datos);
+    echo view('footer');
+}
+
+  
 
     function GraciasPorSuCompra($id_venta = null)
     {
@@ -190,7 +190,7 @@ class Carrito_controller extends Controller{
         echo view('header',$data);
         echo view('panel');
         echo view('back/carrito/GraciasCompra_view', $data);
-        echo view('footer2');
+        echo view('footer');
     }
 
 
@@ -198,16 +198,34 @@ class Carrito_controller extends Controller{
     // *** 3. MÉTODOS DE LÓGICA DE CARRITO ********
     // ********************************************
 
-    // Agrega elemento al carrito
+   // Agrega elemento al carrito
     function add()
     {
         $cart = \Config\Services::cart();
-        // Genera array para insertar en el carrito
+        $request = \Config\Services::request();
+        
+        // Capturamos los datos básicos del POST
+        $id = $request->getPost('id_producto');
+        $nombre = $request->getPost('nombre_prod');
+        $precio_vta = $request->getPost('precio_vta'); // Precio original por defecto
+
+        // --- LÓGICA DE SEGURIDAD PARA OFERTAS ---
+        $ProductoModel = new \App\Models\producto_Model();
+        $producto_db = $ProductoModel->find($id);
+
+        // Si el producto existe y tiene la promo activa, recalculamos el precio REAL
+        if ($producto_db && $producto_db['promo_activada'] == 1) {
+            $porcentaje = $producto_db['descuento_porcentaje'];
+            $precio_vta = $producto_db['precio_vta'] - ($producto_db['precio_vta'] * $porcentaje / 100);
+        }
+        // ----------------------------------------
+
+        // Genera array para insertar en el carrito con el precio validado
         $cart->insert(array(
-            'id'      => $_POST['id_producto'],
+            'id'      => $id,
             'qty'     => 1,
-            'price'   => $_POST['precio_vta'],
-            'name'    => $_POST['nombre_prod'],
+            'price'   => $precio_vta, // Aquí viaja el precio con o sin descuento según corresponda
+            'name'    => $nombre,
         ));
 
         // Mensaje de éxito
@@ -239,507 +257,106 @@ class Carrito_controller extends Controller{
     }
 
     // METODO ACTUALIZAR Actualiza el carrito que se muestra
-    function actualiza_carrito()
-    {
-        $cart = \Config\Services::cart();
-        // Recibe los datos del carrito, calcula y actualiza
-        $cart_info =  $_POST['cart'];
-        
-        foreach( $cart_info as $id => $carrito)
-        {   
-            
-            $rowid = $carrito['rowid'];
-            $price = $carrito['price'];
-            $amount = $price * $carrito['qty'];
-            $qty = $carrito['qty'];
-            
-
-            $cart->update(array(
-                'rowid'   => $rowid,
-                'price'   => $price,
-                'amount' =>  $amount,
-                'qty'     => $qty
-                ));       
-                 
-        }
-        session()->setFlashdata('msg','Carrito actualizado correctamente');
-        // Redirige a la misma página que se encuentra
-        return redirect()->to(base_url('CarritoList'));
-    }
-
-    /* Guarda los datos de la venta en la base de datos
-    public function guarda_compra()
-    {
-        $cart = \Config\Services::cart();
-        $session = session();
-        $usuario_id= $session->get('id_usuario');
-
-        $total = $_POST['total_venta'];
-        $tipo_Pago = $_POST['tipo_pago'];
-
-        $cabecera_model = new Cabecera_model();
-        $ventas_id = $cabecera_model->save([
-            'fecha'         => date('Y-m-d'),
-            'usuario_id'    => $usuario_id,
-            'total_venta'   => $total,
-            'tipo_pago'     => $tipo_Pago
-        ]);
-        // Rescato el ID de la cabecera que se guardo
-        $id_cabecera = $cabecera_model->getInsertID();
-        
-        if ($cart):
-            foreach ($cart->contents() as $item):
-                $VentaDetalle_model = new VentaDetalle_model();
-                $VentaDetalle_model->save([
-                    'venta_id'      => $id_cabecera,
-                    'producto_id'   => $item['id'],
-                    'cantidad'      => $item['qty'],
-                    'precio'        => $item['price'],
-                    'total'         => $item['subtotal']
-                ]);
-
-                // Descuenta del stock y lo guarda en la base de datos
-                $Producto_model = new producto_Model();
-                $producto = $Producto_model->find($item['id']);
-                
-                // Asegurar que el producto existe antes de restar stock
-                if ($producto) {
-                    $stock = $producto['stock'];
-                    $stock_edit = $stock - $item['qty'];
-                    
-                    // Asegurar que el stock no sea negativo
-                    if ($stock_edit < 0) {
-                        $stock_edit = 0; 
-                        // NOTA: Aquí debería haber una validación antes de guardar la compra!
-                    }
-
-                    $datos=[
-                        'stock'  => $stock_edit,
-                    ];
-                    $Producto_model->update($item['id'],$datos);
-                }
-            endforeach;
-        endif;
-
-        $cart->destroy();
-        return redirect()->to(base_url('Gracias'));
-    }
-        
-
-    public function guarda_compra()
-    {
-        $cart = \Config\Services::cart();
-        $session = session();
-        
-        // El ID de usuario suele ser 'id' o 'id_usuario' según tu session, 
-        // revisa cual usas. Aquí uso 'id' que es el estándar.
-        $usuario_id = $session->get('id_usuario'); 
-
-        $total = $cart->total();
-        // Capturamos el tipo de pago del formulario de ConfigurarPago_view
-        $tipo_Pago = $this->request->getPost('metodoPago'); 
-
-        $cabecera_model = new Cabecera_model();
-        
-        // Guardamos la cabecera
-        $cabecera_model->save([
-            'fecha'         => date('Y-m-d'),
-            'usuario_id'    => $usuario_id,
-            'total_venta'   => $total,
-            'tipo_pago'     => $tipo_Pago
-        ]);
-
-        $id_cabecera = $cabecera_model->getInsertID();
-        
-        if ($cart->contents()):
-            foreach ($cart->contents() as $item):
-                $VentaDetalle_model = new VentaDetalle_model();
-                $VentaDetalle_model->save([
-                    'venta_id'      => $id_cabecera,
-                    'producto_id'   => $item['id'],
-                    'cantidad'      => $item['qty'],
-                    'precio'        => $item['price'],
-                    'total'         => $item['subtotal']
-                ]);
-
-
-                /* 1. Guardamos la cabecera y capturamos el ID
-                $id_cabecera = $cabecera_model->insert([
-                'fecha'         => date('Y-m-d'),
-                'usuario_id'    => $usuario_id,
-                'total_venta'   => $total,
-                'tipo_pago'     => $tipo_Pago
-                 ]);
-                 
-
-                // Descuenta del stock
-                $Producto_model = new producto_Model();
-                $producto = $Producto_model->find($item['id']);
-                
-                if ($producto) {
-                    $stock_edit = $producto['stock'] - $item['qty'];
-                    if ($stock_edit < 0) $stock_edit = 0; 
-
-                    $Producto_model->update($item['id'], ['stock' => $stock_edit]);
-                }
-            endforeach;
-        endif;
-
-        $cart->destroy();
-        // 2. REDIRECCIÓN CRUCIAL: Pasamos el ID a la URL
-        //return redirect()->to(base_url('Gracias/' . $id_cabecera));
-        // Redirigimos a Gracias enviando el ID para que pueda descargar su factura
-        return redirect()->to(base_url('Gracias/'.$id_cabecera));
-    }
-    
-
-
-
-    public function guarda_compra()
+function actualiza_carrito()
 {
     $cart = \Config\Services::cart();
-    $session = session();
-
-
-    $cabecera_model = new \App\Models\Cabecera_model();
-    $datosCabecera = [
-    'fecha'       => date('Y-m-d'),
-    'usuario_id'  => $session->get('id_usuario'), 
-    'total_venta' => $cart->total(),
-    'tipo_pago'   => $this->request->getPost('metodoPago')
-];
-
-if ($cabecera_model->insert($datosCabecera)) {
-    $id_cabecera = $cabecera_model->getInsertID();
-} else {
-    // Esto te dirá exactamente QUÉ campo está fallando en la base de datos
-    print_r($cabecera_model->errors()); 
-    die();
-}
+    $Producto_model = new \App\Models\producto_Model(); 
     
-
-
-
-    // IMPORTANTE: Verifica si tu sesión usa 'id' o 'id_usuario'
-    $usuario_id = $session->get('id_usuario'); 
-
-    if (!$usuario_id) {
-        return redirect()->to(base_url('login'))->with('msg', 'Sesión expirada');
-    }
-
-    $metodoPago = $this->request->getPost('metodoPago'); 
-    $totalVenta = $cart->total();
-
-    $cabecera_model = new Cabecera_model();
+    $cart_info = $_POST['cart'];
     
-    // Usamos un array limpio para el insert
-    $datosCabecera = [
-        'fecha'       => date('Y-m-d'),
-        'usuario_id'  => $usuario_id,
-        'total_venta' => $totalVenta,
-        'tipo_pago'   => $metodoPago
-    ];
+    foreach ($cart_info as $id => $carrito) {
+        $qty = $carrito['qty'];
 
-    // Ejecutamos el insert
-    $cabecera_model->insert($datosCabecera);
-    $id_cabecera = $cabecera_model->getInsertID(); // Aquí ya NO debería ser 0
+        // 1. VALIDACIÓN DE CANTIDAD POSITIVA (Se mantiene tu lógica)
+        if ($qty <= 0) {
+            session()->setFlashdata('error', "La cantidad debe ser mayor a 0. Para eliminar un producto, usa el icono de la basura.");
+            return redirect()->to(base_url('CarritoList'));
+        }
 
-    if ($id_cabecera > 0) {
-        foreach ($cart->contents() as $item) {
-            $VentaDetalle_model = new VentaDetalle_model();
-            $VentaDetalle_model->insert([
-                'venta_id'    => $id_cabecera,
-                'producto_id' => $item['id'],
-                'cantidad'    => $item['qty'],
-                'precio'      => $item['price'],
-                'total'       => $item['subtotal']
-            ]);
-
-            // Actualizar Stock
-            $Producto_model = new producto_Model();
-            $producto = $Producto_model->find($item['id']);
-            if ($producto) {
-                $nuevoStock = $producto['stock'] - $item['qty'];
-                $Producto_model->update($item['id'], ['stock' => ($nuevoStock < 0 ? 0 : $nuevoStock)]);
-            }
+        $producto = $Producto_model->find($carrito['id']); 
+        
+        // 2. VALIDACIÓN DE STOCK (Se mantiene tu lógica)
+        if ($producto && $qty > $producto['stock']) {
+            session()->setFlashdata('error', "No se puede actualizar: '{$producto['nombre_prod']}' solo tiene {$producto['stock']} unidades disponibles.");
+            return redirect()->to(base_url('CarritoList'));
         }
         
-        $cart->destroy();
-        return redirect()->to(base_url('Gracias/' . $id_cabecera));
-    } else {
-        // Si llega aquí, hubo un error de DB
-        return "Error al guardar la cabecera de venta.";
+        // 3. ACTUALIZACIÓN SEGURA
+        // Solo enviamos rowid y qty. La librería recalcula el subtotal automáticamente.
+        $cart->update(array(
+            'rowid' => $carrito['rowid'],
+            'qty'   => $qty
+        ));
     }
+
+    session()->setFlashdata('msg', 'Carrito actualizado correctamente');
+    return redirect()->to(base_url('CarritoList'));
 }
-
-
-    // ********************************************
-    // *** 4. MÉTODOS DE FACTURACIÓN (PDF) ********
-    // ********************************************
-
-    function FacturaAdmin($id)
-    {
-        // Secciones de Dompdf comentadas (listas para descomentar cuando se necesite PDF)
-        //$dompdf = new Dompdf();
-
-        $db = db_connect();
-        
-        // Obtener datos de la cabecera
-        $builder2 = $db->table('ventas_cabecera a');
-        $builder2->where('a.id',$id);
-        // NOTA: La columna de join de usuarios en el PDF es 'c.id', diferente a otras. Se mantiene el código original.
-        $builder2->select('a.id , c.nombre , c.apellido, a.total_venta , a.fecha , a.tipo_pago');
-        $builder2->join('usuarios c','a.usuario_id = c.id'); 
-        $ventas2= $builder2->get();
-        $datos2['datos']=$ventas2->getResultArray();
-
-        // Obtener detalle de la venta
-        $builder = $db->table('ventas_detalle u');
-        $builder->where('venta_id',$id);
-        // NOTA: La columna de join de productos en el PDF es 'd.id', diferente a otras. Se mantiene el código original.
-        $builder->select('d.id_producto , d.nombre_prod , u.cantidad , u.precio , u.total ,');
-        $builder->join('productos d','u.producto_id = d.id_producto
-        ');
-        $ventas= $builder->get();
-        $datos['ventas']=$ventas->getResultArray();
-        
-        $data['titulo'] ='Factura';
-
-        echo view('header',$data);
-        echo view('panel');
-        echo view('back/Admin/facturacion_view',$datos2+$datos);
-        echo view('footer2');
-
-        // Código para generar PDF (actualmente comentado)
-        /*
-        $html = view('back/Admin/facturacion_view',$datos2+$datos);
-        $dompdf->loadHtml($html);
-        $dompdf->setPaper('A4', 'portrait'); // Se cambió a portrait por defecto
-        $dompdf->render();
-        $dompdf->stream('demoFactura.pdf',['attachment' => false]);
-        
-    }
     
-    function FacturaCliente($id)
-    {
-        // Secciones de Dompdf comentadas (listas para descomentar cuando se necesite PDF)
-        //$dompdf = new Dompdf();
-
-        $db = db_connect();
-        
-        // Obtener datos de la cabecera
-        $builder2 = $db->table('ventas_cabecera a');
-        $builder2->where('a.id',$id);
-        // NOTA: La columna de join de usuarios es 'c.id_usuario'. Se mantiene el código original.
-        $builder2->select('a.id , c.nombre , c.apellido, a.total_venta , a.fecha , a.tipo_pago');
-        $builder2->join('usuarios c','a.usuario_id = c.id_usuario');
-        $ventas2= $builder2->get();
-        $datos2['datos']=$ventas2->getResultArray();
-
-        // Obtener detalle de la venta
-        $builder = $db->table('ventas_detalle u');
-        $builder->where('venta_id',$id);
-        // NOTA: La columna de join de productos es 'd.id_producto'. Se mantiene el código original.
-        $builder->select('d.id_producto , d.nombre_prod , u.cantidad , u.precio , u.total ,');
-        $builder->join('productos d','u.producto_id = d.id_producto');
-        $ventas= $builder->get();
-        $datos['ventas']=$ventas->getResultArray();
-        
-        $data['titulo'] ='Factura';
-
-        echo view('header',$data);
-        echo view('panel');
-        echo view('back/Admin/facturacion_view',$datos2+$datos);
-        echo view('footer2');
-
-        // Código para generar PDF (actualmente comentado)
-        /*
-        $html = view('back/Admin/facturacion_view',$datos2+$datos);
-        $dompdf->loadHtml($html);
-        $dompdf->setPaper('A4', 'portrait'); // Se cambió a portrait por defecto
-        $dompdf->render();
-        $dompdf->stream('demoFactura.pdf',['attachment' => false]);
-        
-    }
-       
-    
-    function FacturaCliente($id)
-    {
-        $dompdf = new Dompdf();
-        $db = db_connect();
-        
-        // Datos de la cabecera
-        $builder2 = $db->table('ventas_cabecera a');
-        $builder2->where('a.id',$id);
-        $builder2->select('a.id, c.nombre, c.apellido, a.total_venta, a.fecha, a.tipo_pago');
-        $builder2->join('usuarios c','a.usuario_id = c.id_usuario');
-        $ventas2= $builder2->get();
-        $datos2['datos'] = $ventas2->getResultArray();
-
-        // Detalle de la venta
-        $builder = $db->table('ventas_detalle u');
-        $builder->where('venta_id',$id);
-        $builder->select('d.id_producto, d.nombre_prod, u.cantidad, u.precio, u.total');
-        $builder->join('productos d','u.producto_id = d.id_producto');
-        $ventas = $builder->get();
-        $datos['ventas'] = $ventas->getResultArray();
-        
-        $html = view('back/admin/facturacion_view', $datos2 + $datos);
-        
-        $dompdf->loadHtml($html);
-        $dompdf->setPaper('A4', 'portrait');
-        $dompdf->render();
-        
-        // Esto descarga el archivo directamente
-        $dompdf->stream("Factura_Blass_#$id.pdf", ['Attachment' => true]);
-    }
-        
-
-
-    function FacturaCliente($id)
-    {
-        $dompdf = new Dompdf();
-        $db = db_connect();
-        
-        // Datos de la cabecera
-        $builder2 = $db->table('ventas_cabecera a');
-        $builder2->where('a.id',$id);
-        $builder2->select('a.id, c.nombre, c.apellido, a.total_venta, a.fecha, a.tipo_pago');
-        $builder2->join('usuarios c','a.usuario_id = c.id_usuario');
-        $ventas2= $builder2->get();
-        $datos2['datos'] = $ventas2->getResultArray();
-
-        // Detalle de la venta
-        $builder = $db->table('ventas_detalle u');
-        $builder->where('venta_id',$id);
-        $builder->select('d.id_producto, d.nombre_prod, u.cantidad, u.precio, u.total');
-        $builder->join('productos d','u.producto_id = d.id_producto');
-        $ventas = $builder->get();
-        $datos['ventas'] = $ventas->getResultArray();
-        
-        // IMPORTANTE: Verifica que esta ruta sea la correcta en tus carpetas
-        $html = view('back/admin/facturacion_view', $datos2 + $datos);
-        
-        $dompdf->loadHtml($html);
-        $dompdf->setPaper('A4', 'portrait');
-        $dompdf->render();
-        
-        $dompdf->stream("Factura_Blass_#$id.pdf", ['Attachment' => true]);
-    }
-        
-
-
-    function FacturaCliente($id)
-{
-    $dompdf = new Dompdf();
-    $db = db_connect();
-    
-    // Datos de la cabecera
-    $builder2 = $db->table('ventas_cabecera a');
-    $builder2->where('a.id', $id);
-    $builder2->select('a.id, c.nombre, c.apellido, a.total_venta, a.fecha, a.tipo_pago');
-    $builder2->join('usuarios c', 'a.usuario_id = c.id_usuario');
-    $ventas2 = $builder2->get();
-    $datos_cabecera = $ventas2->getResultArray();
-
-    // Detalle de la venta
-    $builder = $db->table('ventas_detalle u');
-    $builder->where('venta_id', $id);
-    $builder->select('d.id_producto, d.nombre_prod, u.cantidad, u.precio, u.total');
-    $builder->join('productos d', 'u.producto_id = d.id_producto');
-    $ventas = $builder->get();
-    $datos_detalle = $ventas->getResultArray();
-    
-    // EXTRAEMOS EL TOTAL AQUÍ:
-    // Si hay datos, tomamos el total_venta del primer registro, sino 0.
-    $total_final = !empty($datos_cabecera) ? $datos_cabecera[0]['total_venta'] : 0;
-
-    // Pasamos todo de forma explícita en un solo array
-    $data_vista = [
-        'datos'       => $datos_cabecera,
-        'ventas'      => $datos_detalle,
-        'total_venta' => $total_final // <--- Ahora la vista siempre la recibirá
-    ];
-
-    $html = view('back/admin/facturacion_view', $data_vista);
-    
-    $dompdf->loadHtml($html);
-    $dompdf->setPaper('A4', 'portrait');
-    $dompdf->render();
-    
-    $dompdf->stream("Factura_Blass_#$id.pdf", ['Attachment' => true]);
-}
-
-
-*/
-
-
-
-
 public function guarda_compra()
 {
     $cart = \Config\Services::cart();
     $session = session();
-    $db = \Config\Database::connect();
+    $db = \Config\Database::connect(); // Necesario para las transacciones
 
-    // 1. Instanciar los modelos necesarios
+    // 1. Instanciar modelos
     $cabecera_model = new \App\Models\Cabecera_model();
     $VentaDetalle_model = new \App\Models\VentaDetalle_model();
     $Producto_model = new \App\Models\producto_Model();
 
     $usuario_id = $session->get('id_usuario'); 
-
     if (!$usuario_id) {
         return redirect()->to(base_url('login'))->with('msg', 'Sesión expirada');
     }
 
-
-    // --- CAMBIO CLAVE AQUÍ: Coincidir con el 'name' del select de la vista ---
-   //$metodo_pago_seleccionado = $this->request->getPost('tipo_pago');
-
-
-   
+    // --- INICIO DE TRANSACCIÓN ---
+    // Esto asegura que si falla el detalle, no se guarde la cabecera (y viceversa)
+    $db->transStart();
 
     // 2. Preparar datos de cabecera
     $datosCabecera = [
         'fecha'       => date('Y-m-d'),
         'usuario_id'  => $usuario_id,
-        'total_venta' => $cart->total(),
+        'total_venta' => $cart->total(), 
         'tipo_pago'   => $this->request->getPost('tipo_pago')
     ];
 
-    // 3. Insertar cabecera y capturar ID real
-    if ($cabecera_model->insert($datosCabecera)) {
-        $id_cabecera = $cabecera_model->getInsertID(); 
-    } else {
-        // Si hay error de validación o DB, lo vemos acá
-        print_r($cabecera_model->errors()); 
-        die();
-    }
+    // Insertamos. Al quitar 'id' de allowedFields en el modelo, CI4 lo maneja solo.
+    $id_cabecera = $cabecera_model->insert($datosCabecera); 
 
-    // 4. Insertar detalles y actualizar stock
-    if ($id_cabecera > 0) {
+    // 3. Insertar Detalles y Actualizar Stock
+    if ($id_cabecera) {
         foreach ($cart->contents() as $item) {
+            // Guardar Detalle
             $VentaDetalle_model->insert([
                 'venta_id'    => $id_cabecera,
                 'producto_id' => $item['id'],
-                'cantidad'    => $item['qty'],
+                'cantidad'    => $item['qty'],   // Aquí se graban las 90 (o las que sean)
                 'precio'      => $item['price'],
                 'total'       => $item['subtotal']
             ]);
 
-            // Actualización de Stock
+            // Actualizar Stock en la tabla 'productos'
             $producto = $Producto_model->find($item['id']);
             if ($producto) {
                 $nuevoStock = $producto['stock'] - $item['qty'];
-                $Producto_model->update($item['id'], ['stock' => ($nuevoStock < 0 ? 0 : $nuevoStock)]);
+                $Producto_model->update($item['id'], [
+                    'stock' => ($nuevoStock < 0 ? 0 : $nuevoStock)
+                ]);
             }
         }
-        
-        $cart->destroy();
-        return redirect()->to(base_url('Gracias/' . $id_cabecera));
+    }
+
+    $db->transComplete();
+    // --- FIN DE TRANSACCIÓN ---
+
+    if ($db->transStatus() === FALSE) {
+        // Si algo falló en la DB, cancela todo
+        return "Error crítico: No se pudo completar la transacción en la base de datos.";
     } else {
-        return "Error crítico: No se generó un ID de venta válido.";
+        // Si todo salió bien, limpiamos carrito y redirigimos
+        $cart->destroy(); 
+        return redirect()->to(base_url('Gracias/' . $id_cabecera));
     }
 }
 
@@ -767,7 +384,7 @@ function FacturaAdmin($id)
     echo view('header', $data);
     echo view('panel');
     echo view('back/admin/facturacion_view', $datos2 + $datos);
-    echo view('footer2');
+    echo view('footer');
 }
 
 // FACTURA PARA EL CLIENTE (Descarga PDF)

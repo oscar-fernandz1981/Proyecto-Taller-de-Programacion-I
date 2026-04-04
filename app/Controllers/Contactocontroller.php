@@ -11,23 +11,25 @@ class Contactocontroller extends BaseController
     	echo view('header');
     	echo view('panel');
          echo view('contacto');
-          echo view('footer2');
+          echo view('footer');
     }
 
     
     // Show consultas list
     public function Datos_consultas(){
-        $consulModel = new FormModel();
-        $estado = 'Pendiente';
-        $data['consultas'] = $consulModel->getConsultas($estado);
-        $dato['titulo']='Listado de Consultas'; 
-        
-        echo view('header',$dato);
-        echo view('panel');
-        echo view('back/usuario/consultas_view', $data);
-          echo view('footer2');
-       
-    }
+    $consulModel = new FormModel();
+    $estado = 'Pendiente';
+    
+    // Obtenemos las consultas pendientes
+    $data['consultas'] = $consulModel->getConsultas($estado);
+    $data['titulo'] = 'Consultas Pendientes'; 
+    
+    echo view('header', $data);
+    echo view('panel');
+    // Esta es la vista que vamos a crear/ajustar ahora:
+    echo view('back/admin/consultas_view', $data); 
+    echo view('footer');
+}
 
     public function ConsultaDetalle($id){
       $Model = new FormModel();
@@ -80,7 +82,7 @@ class Contactocontroller extends BaseController
         echo view('header',$dato);
         echo view('panel');
          echo view('back/usuario/consultasResueltas_view', $data);
-          echo view('footer2');
+          echo view('footer');
        
     }
 
@@ -95,7 +97,7 @@ class Contactocontroller extends BaseController
         echo view('header', $dato);
         echo view('panel');  // Cambia por 'navbar' si prefieres
         echo view('back/usuario/contact_form');
-        echo view('footer2');
+        echo view('footer');
     }
     
     public function submit()
@@ -125,8 +127,9 @@ class Contactocontroller extends BaseController
             'email' => $this->request->getPost('email'),
             'asunto' => $this->request->getPost('asunto'),
             'mensaje' => $this->request->getPost('mensaje'),
+            
+            //'fecha' => date('Y-m-d H:i:s'),
             'estado' => 'Pendiente',
-            'fecha' => date('Y-m-d H:i:s')
         ];
         
         // Si el usuario está logueado, agregar su ID

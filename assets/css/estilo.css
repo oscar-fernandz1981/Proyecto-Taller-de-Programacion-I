@@ -328,6 +328,8 @@ section.container.shadow {
 .carousel {
     max-width: 800px;    /* Limita el ancho total */
     margin: 0 auto;      /* Lo centra en la pantalla */
+	/*margin-top: 40px !important;*/ 
+   	/*margin-bottom: 20px; /* También le damos aire abajo */
 }
 
 /* --- CONTROL DE LAS TARJETAS (CARDS) --- */
@@ -369,4 +371,104 @@ section.container.shadow:hover {
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     filter: invert(1) grayscale(100); /* Las vuelve oscuras/negras */
+}
+
+.custom-card {
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.custom-card:hover {
+    transform: translateY(-5px); /* Efecto de levante */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.btn-comprar {
+    background-color: #004085; /* Azul del logo */
+    color: white;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* Aplicar la fuente a todo el sitio */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa; /* Un gris muy clarito para que resalten las cards */
+}
+
+/* Títulos con más fuerza */
+h1, h2, h3, .navbar-brand {
+    font-weight: 700;
+    color: #004085; /* El azul Francia del logo */
+
+}
+
+
+
+/* --- Mejorando el Navbar con los colores de BLASS --- */
+.navbar {
+    background-color: #004085 !important; /* Azul del logo */
+    border-bottom: 3px solid #000000; /* Detalle en negro como el logo */
+}
+
+.nav-link {
+    color: #ffffff !important; /* Texto blanco para que contraste */
+}
+
+.nav-link:hover {
+    color: #cccccc !important;
+}
+
+/* --- Botones con Identidad --- */
+.btn-primary {
+    background-color: #004085;
+    border: none;
+    border-radius: 25px; /* Bordes redondeados más pro */
+    padding: 10px 25px;
+}
+
+.btn-primary:hover {
+    background-color: #002752; /* Un azul más oscuro al pasar el mouse */
+}
+
+footer {
+    background-color: #1a1a1a; /* Un negro suave */
+    border-top: 4px solid #004085; /* Un hilo azul arriba para conectar con el navbar */
+    color: #ffffff;
+}
+
+/* Botón Ingresar (Verde/Éxito en tu código original, pero vamos a mejorarlo) */
+.btn-ingresar {
+    border: 2px solid #28a745;
+    color: #28a745;
+    background-color: transparent;
+    border-radius: 50px; /* Redondeado total */
+    padding: 8px 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-ingresar:hover {
+    background-color: #28a745;
+    color: white;
+    transform: scale(1.05); /* Se agranda un poquito */
+}
+
+/* Botón Registrate */
+.btn-registro {
+    border: 2px solid #6c757d;
+    color: #6c757d;
+    background-color: transparent;
+    border-radius: 50px;
+    padding: 8px 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-registro:hover {
+    background-color: #6c757d;
+    color: white;
+    transform: scale(1.05);
 }

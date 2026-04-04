@@ -1,0 +1,54 @@
+CRITICAL - 2026-03-23 13:00:47 --> ErrorException: Undefined variable $novedades
+in APPPATH\Views\bienvenida.php on line 151.
+ 1 APPPATH\Views\bienvenida.php(151): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $novedades', 'C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\bienvenida.php', 151)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\fernandez_oscar\\app\\Views\\bienvenida.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('bienvenida', [], true)
+ 5 APPPATH\Controllers\Home.php(16): view('bienvenida')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-03-23 15:10:50 --> ErrorException: Undefined variable $mas_vendidos
+in APPPATH\Controllers\Home.php on line 38.
+ 1 APPPATH\Controllers\Home.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $mas_vendidos', 'C:\\xampp\\htdocs\\fernandez_oscar\\app\\Controllers\\Home.php', 38)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-03-23 16:15:32 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "back/carrito/catalogo_filtrado.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('back/carrito/catalogo_filtrado.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('back/carrito/catalogo_filtrado', [], true)
+ 3 APPPATH\Controllers\producto_controller.php(307): view('back/carrito/catalogo_filtrado', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Producto_controller->catalogo_filtro('3')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-03-23 16:15:40 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "back/carrito/catalogo_filtrado.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('back/carrito/catalogo_filtrado.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('back/carrito/catalogo_filtrado', [], true)
+ 3 APPPATH\Controllers\producto_controller.php(307): view('back/carrito/catalogo_filtrado', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Producto_controller->catalogo_filtro('1')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-03-23 16:15:46 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "back/carrito/catalogo_filtrado.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('back/carrito/catalogo_filtrado.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('back/carrito/catalogo_filtrado', [], true)
+ 3 APPPATH\Controllers\producto_controller.php(307): view('back/carrito/catalogo_filtrado', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Producto_controller->catalogo_filtro('2')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-03-23 16:15:53 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "back/carrito/catalogo_filtrado.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('back/carrito/catalogo_filtrado.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('back/carrito/catalogo_filtrado', [], true)
+ 3 APPPATH\Controllers\producto_controller.php(307): view('back/carrito/catalogo_filtrado', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Producto_controller->catalogo_filtro('3')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

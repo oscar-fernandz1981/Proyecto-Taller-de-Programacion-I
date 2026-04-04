@@ -6,8 +6,11 @@ class FormModel extends Model
 	
     protected $table = 'consultas';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['nombre', 'email','mensaje','estado'];
-
+    protected $useTimestamps = true; 
+    protected $createdField  = 'fecha'; // CodeIgniter llenará esta columna al crear
+    protected $updatedField  = '';
+    protected $allowedFields = ['nombre', 'email', 'asunto', 'mensaje', 'fecha', 'estado', 'id_usuario'];
+    
     public function getConsulta($id){
 
     	return $this->where('id',$id)->first($id);

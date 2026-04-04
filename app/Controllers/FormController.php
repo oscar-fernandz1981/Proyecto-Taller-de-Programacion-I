@@ -2,70 +2,82 @@
 namespace App\Controllers;
 use App\Models\FormModel;
 use CodeIgniter\Controller;
-use App\Models\usuario_Model;
 
 class FormController extends Controller
 {
+    // Carga la vista del formulario
     public function create() {
-
-        $dato['titulo']='Contacto';
-        echo view('header',$dato);
+        $dato['titulo'] = 'Contacto';
+        
+        echo view('header', $dato);
         echo view('panel');
         echo view('back/usuario/contact_form');
-        echo view('footer2');
+        echo view('footer');
     }
- 
+
+    // Procesa la validación y el guardado
     public function formValidation() {
         helper(['form', 'url']);
-        
-        
-        $input = $this->validate([
-            'nombre' =>[
-                'rules'=>'required|min_length[3]|max_length[25]',
-                'errors'=>[
-                 'required' => 'El campo Nombre no esta completo',
-                 'min_length'=>'El campo Nombre solo acepta un minimo de 3 caracteres',
-                 'max_length'=>'El campo Nombre solo acepta un maximo de 25 caracteres',
+
+        // 1. Definimos las reglas de validación
+        $reglas = [
+            'nombre' => [
+                'rules'  => 'required|min_length[3]|max_length[25]',
+                'errors' => [
+                    'required'   => 'El campo Nombre no está completo.',
+                    'min_length' => 'El nombre debe tener al menos 3 caracteres.',
+                    'max_length' => 'El nombre no puede superar los 25 caracteres.'
                 ]
-                ],
-            'email' =>[
-                'rules'=>'required|valid_email',
-                'errors'=>[
-                    'required' => 'El campo email no esta completo',
-                    'min_length'=>'El campo email solo acepta un minimo de 4 caracteres',
-                    'max_length'=>'El campo email solo acepta un maximo de 100 caracteres',
-                    'valid_email'=> 'El email es invalido',
+            ],
+            'email' => [
+                'rules'  => 'required|valid_email',
+                'errors' => [
+                    'required'    => 'El campo email no está completo.',
+                    'valid_email' => 'Debes ingresar un formato de email válido.'
+                ]
+            ],
+
+            'asunto' => [
+                'rules'  => 'required',
+                'errors' => [
+                    'required' => 'Debe seleccionar un motivo para su consulta.'
+                ]
+            ],
+            'mensaje' => [
+                'rules'  => 'required',
+                'errors' => [
+                    'required' => 'El mensaje no puede estar vacío.'
+                ]
             ]
-        ], 
-           
-            'mensaje' =>[
-              'rules'=>'required',
-              'errors'=> [
-                'required' => 'Este campo no puede estar vacio'
-              ]
-              ],
-            
-        ]);
-        $formModel = new FormModel();
- 
-        if (!$input) {
-            $dato['titulo']='Contacto';
-            echo view('header',$dato);
-           echo view('panel');
-            echo view('back/usuario/contact_form',['validation' => $this->validator]);
-            echo view('footer2');
-        } else {
-            $formModel->save([
-                'nombre' => $this->request->getVar('nombre'),
-                'email'  => $this->request->getVar('email'),
-                
-                'mensaje' => $this->request->getVar('mensaje'),
-                'asunto'  => $this->request->getVar('asunto'),
-                'estado' => 'Pendiente',
-            ]);          
-            session()->setFlashdata('msg','Mensaje Enviado con éxito! Nos pondremos en contacto pronto.');
-            //return $this->response->redirect(site_url('/panel'));
-            return redirect()->to(base_url('contact-form'));
+        ];
+
+        // 2. Ejecutamos la validación
+        if (!$this->validate($reglas)) {
+
+            return redirect()->back()->withInput()->with('validation', $this->validator);
+            /* Obtenemos los errores como un array de strings ['nombre' => 'mensaje...']
+                    $mensajesDeError = $this->validator->getErrors();
+    
+                    return redirect()->back()
+                     ->withInput()
+                     ->with('errores', $mensajesDeError);*/
         }
+
+        // 3. SI PASA: Guardamos en la base de datos
+        $formModel = new FormModel();
+        
+        $data = [
+            'nombre'  => $this->request->getVar('nombre'),
+            'email'   => $this->request->getVar('email'),
+            'mensaje' => $this->request->getVar('mensaje'),
+            'asunto'  => $this->request->getVar('asunto') ?? 'Consulta General',
+            'estado'  => 'Pendiente'
+        ];
+
+        $formModel->save($data);
+
+        // 4. Mensaje de éxito y redirección
+        session()->setFlashdata('msg', '¡Mensaje enviado con éxito! Nos comunicaremos pronto.');
+        return redirect()->to(base_url('contacto'));
     }
 }

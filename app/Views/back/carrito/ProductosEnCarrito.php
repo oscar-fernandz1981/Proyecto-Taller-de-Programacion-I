@@ -6,6 +6,16 @@
       </div>
   <?php endif?>
 
+<?php if(session("error")): ?>
+
+   <div class="container alert alert-danger text-center" style="width: 50%;">
+
+      <?php echo session("error"); ?>
+
+   </div>
+
+<?php endif; ?>
+
 <div class="container p-3 mb-2 text-white border-top border border-secondary rounded fondo2" style="width:80%;">
 
 <div class="cart">
@@ -63,15 +73,20 @@
             echo form_hidden('cart[' . $item['id'] . '][rowid]', $item['rowid']);
             echo form_hidden('cart[' . $item['id'] . '][name]', $item['name']);
             echo form_hidden('cart[' . $item['id'] . '][price]', $item['price']);
-            echo form_hidden('cart[' . $item['id'] . '][qty]', $item['qty']);
+            //echo form_hidden('cart[' . $item['id'] . '][qty]', $item['qty']);
         ?>
             <tr style="color: white;">
                 <td><?php echo $i++; ?></td>
                 <td><?php echo $item['name']; ?></td>
                 <td>$ARS <?php echo number_format($item['price'], 2); ?></td>
                 <td>
-                    <?php echo form_input('cart[' . $item['id'] . '][qty]', $item['qty'],
-                                            'maxlength="3" size="1" style="text-align: right"'); ?>
+                    <?php echo form_input([
+                        'name'  => 'cart[' . $item['id'] . '][qty]',
+                        'value' => $item['qty'],
+                        'type'  => 'number', // Cambia a flechas de selección de número
+                        'min'   => '1',      // No permite bajar de 1 en el navegador
+                        'style' => 'text-align: right; width: 60px;'
+                    ]); ?>
                 </td>
                 <?php $gran_total = $gran_total + $item['subtotal']; ?>
                 <td>$ARS <?php echo number_format($item['subtotal'], 2) ?></td>

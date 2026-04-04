@@ -1,0 +1,16 @@
+ERROR - 2026-03-15 11:05:44 --> mysqli_sql_exception: Unknown column 'asunto' in 'field list' in C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `co...', 0)
+#1 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `co...')
+#2 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `co...')
+#3 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `co...', Array, false)
+#4 C:\xampp\htdocs\fernandez_oscar\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\fernandez_oscar\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\fernandez_oscar\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\fernandez_oscar\system\BaseModel.php(713): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\fernandez_oscar\app\Controllers\FormController.php(77): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(941): App\Controllers\FormController->formValidation()
+#10 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+#11 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\fernandez_oscar\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}

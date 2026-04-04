@@ -1,0 +1,38 @@
+CRITICAL - 2026-03-06 00:18:02 --> ParseError: Unmatched '}'
+in APPPATH\Controllers\Datatable_controller.php on line 50.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\fernandez_oscar\\app\\Controllers\\Datatable_controller.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Datatable_controller')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Datatable_controller')
+ 4 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\Datatable_controller', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2026-03-06 00:20:47 --> mysqli_sql_exception: Unknown column 'asunto' in 'field list' in C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\fernandez_oscar\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `co...', 0)
+#1 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `co...')
+#2 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `co...')
+#3 C:\xampp\htdocs\fernandez_oscar\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `co...', Array, false)
+#4 C:\xampp\htdocs\fernandez_oscar\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\fernandez_oscar\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\fernandez_oscar\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\fernandez_oscar\system\BaseModel.php(713): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\fernandez_oscar\app\Controllers\FormController.php(77): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(941): App\Controllers\FormController->formValidation()
+#10 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+#11 C:\xampp\htdocs\fernandez_oscar\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\fernandez_oscar\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2026-03-06 00:54:16 --> Error: Class "App\Controllers\Usuarios_model" not found
+in APPPATH\Controllers\usuario_controller.php on line 275.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\usuario_controller->usuarioEdit()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-03-06 14:16:29 --> ErrorException: Undefined array key "id"
+in APPPATH\Controllers\usuario_controller.php on line 320.
+ 1 APPPATH\Controllers\usuario_controller.php(320): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\fernandez_oscar\\app\\Controllers\\usuario_controller.php', 320)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\usuario_controller->usuarioEdit()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

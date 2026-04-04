@@ -1,0 +1,6 @@
+CRITICAL - 2026-03-20 01:49:04 --> Error: Call to undefined method App\Controllers\Producto_controller::_updateProducto()
+in APPPATH\Controllers\producto_controller.php on line 198.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Producto_controller->ProdValidationEdit()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

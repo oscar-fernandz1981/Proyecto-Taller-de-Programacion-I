@@ -1,62 +1,58 @@
+<?php 
+$session = session();
+$nombre = $session->get('nombre');
+$email = $session->get('email');
+$id = $session->get('id');
+?>
 
-<?php $session = session();
-          $nombre= $session->get('nombre');
-          $email=$session->get('email');
-          $id=$session->get('id');?>
 <body>
-  <div class="container mt-5 fondo2 text-dark" width=50%;>
+  <div class="container mt-5 fondo2 text-dark" style="width: 50%;">
     <h2 class="text-center">Contactanos</h2>
-         
-    <?php $validation = \Config\Services::validation(); ?>
+          
     <form method="post" action="<?php echo base_url('/submit-form') ?>">
-      <div class="form-group">
+      <?= csrf_field(); ?>
+
+      <div class="form-group mb-3">
         <label>Nombre</label>
-        <?php if($nombre != null){?>
-        <input type="text" name="nombre" value="<?php echo $nombre ?>" readonly="true" class="form-control">
-        <?php }else{?>
-        <input type="text" name="nombre" class="form-control">
-        <?php }?>
-        <!-- Error -->
-        <?php if($validation->getError('nombre')) {?>
-            <div class='alert alert-danger mt-2'>
-              <?= $error = $validation->getError('nombre'); ?>
-            </div>
-        <?php }?>
+        <?php if($nombre != null){ ?>
+            <input type="text" name="nombre" value="<?php echo $nombre ?>" readonly="true" class="form-control">
+        <?php } else { ?>
+            <input type="text" name="nombre" value="<?= old('nombre') ?>" class="form-control">
+        <?php } ?>
+        
+        <div class="text-danger small mt-1">
+            <?= validation_show_error('nombre') ?>
+        </div>
       </div>
-       
-      <div class="form-group">
+        
+      <div class="form-group mb-3">
         <label>E-mail</label>
-        <?php if($email != null){?>
-        <input type="text" name="email" value="<?php echo $email ?>" readonly="true" class="form-control">
-        <?php }else{?>
-        <input type="text" name="email" class="form-control">
-        <?php }?>
-        <!-- Error -->
-        <?php if($validation->getError('email')) {?>
-            <div class='alert alert-danger mt-2'>
-              <?= $error = $validation->getError('email'); ?>
-            </div>
-        <?php }?>
+        <?php if($email != null){ ?>
+            <input type="text" name="email" value="<?php echo $email ?>" readonly="true" class="form-control">
+        <?php } else { ?>
+            <input type="text" name="email" value="<?= old('email') ?>" class="form-control">
+        <?php } ?>
+        
+        <div class="text-danger small mt-1">
+            <?= validation_show_error('email') ?>
+        </div>
       </div>
       
-      <div class="form-group">
-        <label for="exampleFormControlTextarea1">Mensaje</label>
-        <textarea class="form-control" name="mensaje" rows="3"></textarea>
-        <!-- Error -->
-        <?php if($validation->getError('mensaje')) {?>
-            <div class='alert alert-danger mt-2'>
-              <?= $error = $validation->getError('mensaje'); ?>
-            </div>
-        <?php }?>
+      <div class="form-group mb-3">
+        <label for="mensaje">Mensaje</label>
+        <textarea class="form-control" name="mensaje" rows="3"><?= old('mensaje') ?></textarea>
+        
+        <div class="text-danger small mt-1">
+            <?= validation_show_error('mensaje') ?>
+        </div>
       </div>
+
       <br>
-      <div class="">
-        <button type="submit" class="btn btn-outline-success float-end">Enviar</button>
-        <input type="reset" value="Cancelar" class="btn btn-outline-danger float-end">
-        <br>
+      <div class="clearfix">
+        <button type="submit" class="btn btn-outline-success float-end ms-2">Enviar</button>
+        <a href="<?= base_url('contacto') ?>" class="btn btn-outline-danger float-end">Cancelar</a>
       </div>
       <br>
     </form>
   </div>
 <br>
-

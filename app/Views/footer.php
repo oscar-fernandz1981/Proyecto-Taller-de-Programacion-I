@@ -1,117 +1,68 @@
 <br> 
 
-<footer class="bg-ligth text-dark pt-5 pb-4" style="background-color: #e3f2fd;">
-    <div class="container text-center text-md-start">
-        <div class="row text-center justify-content-between text-md-start">
+<footer class="bg-dark text-white pt-5 pb-4 w-100" style="position: relative; clear: both;">
+    
+    <div class="container">
+        <div class="row text-center text-md-start justify-content-between">
 
-            
             <div class="col-md-6 col-lg-2 col-xl-2 col-12 mx-auto mt-3">
                 <h5 class="text-uppercase mb-4 font-weight-bold text-primary">Mapa del sitio</h5>
-                <hr class="mb-4">
-                <p>
-                    <a href="#" class="text-dark">Tu Cuenta</a>
-                </p>
-                <p>
-                    <a href="<?php echo base_url()?>promociones" class="text-dark">Promociones</a>
-
-                </p>
-                <p>
-                    <a href="<?php echo base_url()?>condiciones" class="text-dark">Condiciones de Uso</a>
-                </p>
-                <p>
-                    <a href="<?php echo base_url()?>contacto" class="text-dark">Ayuda</a>
-                </p>
+                <hr class="mb-4 bg-primary" style="opacity: 1;">
+                <p><a href="<?php echo base_url('login')?>" class="text-white text-decoration-none">Tu Cuenta</a></p>
+                <p><a href="<?php echo base_url('promociones')?>" class="text-white text-decoration-none">Promociones</a></p>
+                <p><a href="<?php echo base_url('condiciones')?>" class="text-white text-decoration-none">Condiciones de Uso</a></p>
+                <p><a href="<?php echo base_url('contacto')?>" class="text-white text-decoration-none">Ayuda</a></p>
             </div>
 
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
                 <h5 class="text-uppercase mb-4 font-weight-bold text-primary">Conocenos</h5>
-                <hr class="mb-4">
-                <p>
-                    <a href="#" class="text-dark">Güemes 1020, Corrientes</a>
-                </p>
-                <p>
-                    <a href="#" class="text-dark">Abierto - 9 AM - 20:30 PM</a>
-
-                </p>
-                
+                <hr class="mb-4 bg-primary" style="opacity: 1;">
+                <p class="text-white">Güemes 1020, Corrientes</p>
+                <p class="text-white">Abierto - 9 AM - 20:30 PM</p>
             </div>
 
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                <h5 class="text-uppercase mb-4 font-weight-bold text-primary" >formas de pago</h5>
-                
-                <hr class="mb-4">
-                <p class="direccion">
-                    <li class="fas fa-credit-card me-3 "></li>Todas las tarjetas
-                </p>
-                <p class="footer-p">
-                    <li class="fas fa-money-bill me-3"></li>Efectivo
-                </p>
-                <p class="footer-p">
-                    <li class="fa-solid fa-money-bill-transfer me-3"></li>Transferencia
-                </p>
-
-                
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-primary">Formas de pago</h5>
+                <hr class="mb-4 bg-primary" style="opacity: 1;">
+                <p><i class="fas fa-credit-card me-3"></i>Todas las tarjetas</p>
+                <p><i class="fas fa-money-bill me-3"></i>Efectivo</p>
+                <p><i class="fa-solid fa-money-bill-transfer me-3"></i>Transferencia</p>
             </div>
 
-            <hr class="mb-4">
-            <div class="text-center mb-2">
-                <p>
-                    Copyright Todos los derechos reservados
-                    <a href="<?php echo base_url()?>">
-                        <strong class="text-primary">Blass Multirubro</strong>
+            <hr class="mb-4 mt-4">
 
-                    </a>
-                </p>
-            </div>
-
-            <div class="text-center">
-                <ul class="list-unstyled list-inline" >
-                    <li class="list-inline-item ">
-                        <a href="#" class="text-dark"><i class="fab fa-facebook"></i>
+            <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p>Copyright Todos los derechos reservados:
+                        <a href="<?php echo base_url()?>" class="text-decoration-none">
+                            <strong class="text-primary">Blass Multirubro</strong>
                         </a>
-                    </li>
+                    </p>
+                </div>
 
-                    <li class="list-inline-item ">
-                        <a href="#" class="text-dark"><i class="fab fa-instagram"></i>
-                        </a>
-                    </li>
-                    <li class="list-inline-item ">
-                        <a href="#" class="text-dark"><i class="fab fa-whatsapp"></i>
-                        </a>
-                    </li>
-
-                    
-                </ul>
-
+                <div class="col-md-5 col-lg-4">
+                    <div class="text-center text-md-end">
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item">
+                                <a href="#" class="text-white" style="font-size: 23px;"><i class="fab fa-facebook"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="text-white" style="font-size: 23px;"><i class="fab fa-instagram"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="text-white" style="font-size: 23px;"><i class="fab fa-whatsapp"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-
-
-
-
-
 
         </div>
-
     </div>
-
 </footer>
 
-
-</footer>
-
-
-    <script src="main.js"></script>
-
-    <!--<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-    -->
-    <script src="<?php echo base_url('assets/js/bootstrap.min.js');?>"></script>
-    <script src="<?php echo base_url('assets/js/bootstrap.bundle.min.js');?>"></script>
-   
-
-    
-
+<script src="<?php echo base_url('assets/js/bootstrap.min.js');?>"></script>
+<script src="<?php echo base_url('assets/js/bootstrap.bundle.min.js');?>"></script>
 
 </body>
-
 </html>

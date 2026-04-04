@@ -5,14 +5,21 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
+$routes->post('submit-form', 'FormController::formValidation');
 $routes->get('/', 'Home::index');
 $routes->get('/dashboard', 'Dashboard::index', ['filter' => 'auth']);
 $routes->get('/somos', 'Home::somos');
-$routes->get('/promociones', 'Home::promociones');
+$routes->get('/promociones', 'Home::promoVisita');
+$routes->get('/prodEnOferta', 'producto_controller::ProductosEnOferta');
 $routes->get('/condiciones', 'Home::condiciones');
-$routes->get('contacto', 'FormController::create'); // O el controlador que cargue contacto.php
-$routes->post('submit-form', 'FormController::formValidation');
+//$routes->get('contacto', 'FormController::create'); // O el controlador que cargue contacto.php
+//$routes->post('submit-form', 'FormController::formValidation');
 $routes->get('catalogo', 'producto_controller::ProductosDisp');
+$routes->get('contacto', 'FormController::create');
+$routes->get('/ProductoDetalle/(:num)', 'producto_controller::ProductoDetalle/$1');
+$routes->get('catalogo_filtro/(:num)', 'Producto_controller::catalogo_filtro/$1');
+$routes->get('comercializacion', 'Home::comercializacion'); 
+//$routes->post('enviar-contacto', 'FormController::formValidation'); // Le cambiamos el nombre a la ruta para evitar choques
 //$routes->get('/productos', 'Home::productos');
 
 // REGISTRO PÚBLICO - SIN FILTER
@@ -26,7 +33,15 @@ $routes->get('/logout', 'login_controller::logout');
 
 // ==================== RUTAS DE ADMIN (SOLO PERFIL 1) ====================
 $routes->group('', ['filter' => 'auth:1'], function($routes) {
-    
+
+        // CONSULTAS - ADMIN
+    $routes->get('consultas', 'Contactocontroller::Datos_consultas');
+    $routes->get('detalle-consulta/(:num)', 'Contactocontroller::ConsultaDetalle/$1');
+    $routes->get('resolver-consulta/(:num)', 'Contactocontroller::deleteConsulta/$1'); // Este es el que marca como resuelta
+    $routes->get('habilitar-consulta/(:num)', 'Contactocontroller::habilitarConsulta/$1');
+    $routes->get('consultasResueltas', 'Contactocontroller::Datos_consultasResueltas');
+    $routes->post('ConsultaResuelta/(:num)', 'Contactocontroller::deleteConsulta/$1');
+   
     // PRODUCTOS - ADMIN
     $routes->get('/nuevoProducto', 'producto_controller::nuevoProducto');
     $routes->post('/ProductoValidation', 'producto_controller::ProductoValidation');
@@ -36,6 +51,7 @@ $routes->group('', ['filter' => 'auth:1'], function($routes) {
     $routes->get('/deleteProd/(:num)', 'producto_controller::deleteProd/$1');
     $routes->get('/ProductoEdit/(:num)', 'producto_controller::getProductoEdit/$1');
     $routes->get('producto_controller/habilitarProd/(:num)', 'producto_controller::habilitarProd/$1');
+    $routes->get('/Lista_Promociones', 'producto_controller::ListaPromociones');
     
     // USUARIOS - ADMIN
 
@@ -61,7 +77,7 @@ $routes->group('', ['filter' => 'auth:1'], function($routes) {
     
     
     $routes->get('compras', 'Carrito_controller::ListComprasCabecera');
-    $routes->get('DetalleVta/(:num)', 'Carrito_controller::ListCompraDetalle/$1');
+    // $routes->get('DetalleVta/(:num)', 'Carrito_controller::ListCompraDetalle/$1');
     $routes->get('PDF/(:num)', 'Carrito_controller::FacturaAdmin/$1');
     $routes->get('admin/estadisticas', 'Panel_controller::estadisticas');
     $routes->get('admin/reportes', 'Panel_controller::reportes');
@@ -90,14 +106,15 @@ $routes->group('', ['filter' => 'auth:2'], function($routes) {
     $routes->get('factura_cliente/(:num)', 'Carrito_controller::FacturaCliente/$1');
     
     // MI PERFIL - CLIENTE
-    $routes->get('miPerfil', 'usuario_controller::miPerfil');
+    $routes->get('miPerfil', 'Datatable_controller::editoMisDatos');
+    //$routes->get('miPerfil', 'usuario_controller::miPerfil');
     $routes->get('editoMisDatos/(:num)', 'Datatable_controller::editoMisDatos/$1');
     $routes->post('/actualizarDatos', 'usuario_controller::usuarioEdit');
     
     // CONTACTO - CLIENTE (Enviar consultas) - ¡ELIGE UNA OPCIÓN!
      //Opción A: Usar FormController (el que YA funciona)
      $routes->get('contact-form', 'FormController::create');
-     $routes->post('submit-form', 'FormController::formValidation');
+    // $routes->post('submit-form', 'FormController::formValidation');
     
     // Opción B: Usar Contactocontroller (nuevo)
     //$routes->get('contacto', 'Contactocontroller::contacto');
@@ -106,6 +123,7 @@ $routes->group('', ['filter' => 'auth:2'], function($routes) {
 
 // ==================== RUTAS PARA AMBOS PERFILES (1 y 2) ====================
 $routes->group('', ['filter' => 'auth:1,2'], function($routes) {
+    $routes->get('DetalleVta/(:num)', 'Carrito_controller::ListCompraDetalle/$1');
     $routes->get('/panel', 'panel_controller::index');
     $routes->get('facturacion/(:num)', 'panel_controller::facturacion/$1');
 });

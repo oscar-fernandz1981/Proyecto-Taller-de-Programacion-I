@@ -108,45 +108,95 @@
     </br>
     
     <!-- CARDS -->
-    <section class="container mt-5  ">
+    <section class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-6 col-12 mt-3 d-flex justify-content-center">
+            <a href="<?= base_url('catalogo_filtro/3') ?>" class="text-decoration-none">
+                <div class="card shadow-img text-center h-100" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Juguetes y Regalería </h5>
+                        <img src="<?= base_url('assets/img/tienda-de-jugueteria.jpg') ?>" class="card-img-top custom-card-img" alt="Regalería">
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-12 mt-3 d-flex justify-content-center">
+            <a href="<?= base_url('catalogo_filtro/1') ?>" class="text-decoration-none">
+                <div class="card shadow-img text-center h-100" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Línea Termos</h5>
+                        <img src="<?= base_url('assets/img/termo-1.jpg') ?>" class="card-img-top custom-card-img" alt="Hogar">
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-12 mt-3 d-flex justify-content-center">
+            <a href="<?= base_url('catalogo_filtro/2') ?>" class="text-decoration-none">
+                <div class="card shadow-img text-center h-100" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Auriculares y Tech</h5>
+                        <img src="<?= base_url('assets/img/auri1.jpg') ?>" class="card-img-top custom-card-img" alt="Detalles">
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+
+          <!-- NOVEDADES -->
+<section class="container mt-5 py-4 bg-light rounded shadow-sm">
+    <h3 class="text-center mb-4"><i class="bi bi-star-fill text-warning"></i> Novedades</h3>
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+        <?php if (!empty($novedades)): ?>
+            <?php foreach($novedades as $nov): ?>
+                <div class="col text-center">
+                    <img src="<?= base_url('assets/uploads/'.$nov['imagen']) ?>" class="rounded-circle mb-2" style="width: 100px; height: 100px; object-fit: cover; border: 3px solid #007bff;">
+                    <h6><?= $nov['nombre_prod'] ?></h6>
+                    
+                </div>
+            <?php endforeach; ?>
+        <?php else: ?>
+            <div class="col-12 text-center">
+                <p class="text-muted italic">Próximamente nuevas novedades para vos.</p>
+            </div>
+        <?php endif; ?>
+    </div>
+</section>
+
+
+
+          <!-- MAS BUSCADOS -->
+<section class="container mt-5 mb-5">
+    <h3 class="text-center mb-4"><i class="bi bi-fire text-danger"></i> Los más buscados</h3>
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+        <?php if (!empty($mas_vendidos)): ?>
+            <?php foreach($mas_vendidos as $top): ?>
+                <div class="col">
+                    <div class="card border-0 shadow-sm text-center h-100">
+                        <img src="<?= base_url('assets/uploads/'.$top['imagen']) ?>" class="card-img-top p-3" style="max-height: 150px; object-fit: contain;">
+                        <div class="card-body">
+                            <p class="card-text fw-bold"><?= $top['nombre_prod'] ?></p>
+                            <span class="badge bg-success">$<?= number_format($top['precio_vta'], 2) ?></span>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        <?php else: ?>
+            <div class="col-12 text-center">
+                <p class="text-muted">¡Nuestros productos estrella están por llegar!</p>
+            </div>
+        <?php endif; ?>
+    </div>
+</section>
             
-        <div class="row justify-content-center">
-            <div class ="col-lg-4 col-md-6 col-12 mt-3 d-flex justify-content-center ">
-            <div class="card shadow-img text-center" style="width: 18rem;">
-                    <div class="card-body ">
-                        <h5 class="card-title">Regalería</h5>
-                        <!--<h6 class="card-subtitle mb-2 text-muted">Subtitulo</h6>-->
-                        <img src="assets/img/bazar-cajas.jpg" class="card-img-top custom-card-img" alt="...">
-                    </div>
-            </div>
-            </div>
-
-                <div class ="col-lg-4 col-md-6 col-12 mt-3 d-flex justify-content-center">
-                <div class="card shadow-img text-center" style="width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Todo para el hogar</h5>
-                        <!--<h6 class="card-subtitle mb-2 text-muted">Subtitulo</h6>-->
-                        <img src="assets/img/bazar1.jpg" class="card-img-top custom-card-img" alt="...">
-                    </div>
-                </div>
-                </div>
-
-                <div class ="col-lg-4 col-md-6 col-12 mt-3 d-flex justify-content-center">
-                <div class="card shadow-img text-center" style="width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Detalles especiales</h5>
-                        <!--<h6 class="card-subtitle mb-2 text-muted">Subtitulo</h6>-->
-                        <img src="assets/img/bazar2.jpg" class="card-img-top custom-card-img" alt="...">
-                    </div>
-                </div>
-                </div>
 
 
 
-
-
-            </div>
-        </section>
+        
    
     <script src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>

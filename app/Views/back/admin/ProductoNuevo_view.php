@@ -103,6 +103,48 @@
             </div>
         <?php }?>
   </div>
+
+
+
+  <div class="row border rounded p-3 mb-3 bg-light">
+    <div class="col-md-6 mb-3">
+        <label class="form-label fw-bold">¿Activar Promoción?</label>
+        <select name="promo_activada" class="form-select" id="promo_select">
+            <option value="0" selected>No</option>
+            <option value="1">Sí</option>
+        </select>
+    </div>
+    <div class="col-md-6 mb-3">
+        <label class="form-label fw-bold">Porcentaje de Descuento</label>
+        <div class="input-group">
+            <input name="descuento_porcentaje" id="desc_input" type="number" 
+                   class="form-control" placeholder="0" 
+                   min="0" max="100" value="0">
+            <span class="input-group-text">%</span>
+        </div>
+    </div>
+</div>
+
+<script>
+    const promoSelect = document.getElementById('promo_select');
+    const descInput = document.getElementById('desc_input');
+
+    // Bloquea el campo de porcentaje si no hay promo activa
+    promoSelect.addEventListener('change', function() {
+        if (this.value === "0") {
+            descInput.value = 0;
+            descInput.disabled = true;
+        } else {
+            descInput.disabled = false;
+        }
+    });
+    
+    // Estado inicial
+    descInput.disabled = true;
+</script>
+
+
+
   <br>
           <input type="submit" value="Guardar" class="btn btn-outline-success float-end ms-2">
           <a type="reset" href="<?php echo base_url('Lista_Productos');?>" class="btn btn-outline-danger float-end">Cancelar</a>

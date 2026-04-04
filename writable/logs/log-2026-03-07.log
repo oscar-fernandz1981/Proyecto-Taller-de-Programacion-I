@@ -1,0 +1,63 @@
+CRITICAL - 2026-03-07 23:54:59 --> ParseError: syntax error, unexpected token "echo", expecting "," or ";"
+in APPPATH\Views\back\usuario\editoMisDatos_view.php on line 38.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('back/usuario/editoMisDatos_view', [], true)
+ 3 APPPATH\Controllers\Datatable_controller.php(44): view('back/usuario/editoMisDatos_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Datatable_controller->editoMisDatos()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Datatable_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-03-07 23:55:42 --> ParseError: syntax error, unexpected token "echo", expecting "," or ";"
+in APPPATH\Views\back\usuario\editoMisDatos_view.php on line 38.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('back/usuario/editoMisDatos_view', [], true)
+ 3 APPPATH\Controllers\Datatable_controller.php(44): view('back/usuario/editoMisDatos_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Datatable_controller->editoMisDatos()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Datatable_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-03-07 23:56:08 --> ParseError: syntax error, unexpected token "echo", expecting "," or ";"
+in APPPATH\Views\back\usuario\editoMisDatos_view.php on line 37.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('back/usuario/editoMisDatos_view', [], true)
+ 3 APPPATH\Controllers\Datatable_controller.php(44): view('back/usuario/editoMisDatos_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Datatable_controller->editoMisDatos()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Datatable_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-03-07 23:56:12 --> ParseError: syntax error, unexpected token "echo", expecting "," or ";"
+in APPPATH\Views\back\usuario\editoMisDatos_view.php on line 37.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('back/usuario/editoMisDatos_view', [], true)
+ 3 APPPATH\Controllers\Datatable_controller.php(44): view('back/usuario/editoMisDatos_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Datatable_controller->editoMisDatos()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Datatable_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-03-07 23:56:38 --> ParseError: syntax error, unexpected token "echo", expecting "," or ";"
+in APPPATH\Views\back\usuario\editoMisDatos_view.php on line 37.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('back/usuario/editoMisDatos_view', [], true)
+ 3 APPPATH\Controllers\Datatable_controller.php(44): view('back/usuario/editoMisDatos_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Datatable_controller->editoMisDatos()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Datatable_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-03-07 23:56:58 --> ParseError: syntax error, unexpected token "echo", expecting "," or ";"
+in APPPATH\Views\back\usuario\editoMisDatos_view.php on line 37.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('back/usuario/editoMisDatos_view', [], true)
+ 3 APPPATH\Controllers\Datatable_controller.php(44): view('back/usuario/editoMisDatos_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Datatable_controller->editoMisDatos()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Datatable_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-03-07 23:57:18 --> ParseError: syntax error, unexpected token "echo", expecting "," or ";"
+in APPPATH\Views\back\usuario\editoMisDatos_view.php on line 37.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('back/usuario/editoMisDatos_view', [], true)
+ 3 APPPATH\Controllers\Datatable_controller.php(44): view('back/usuario/editoMisDatos_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Datatable_controller->editoMisDatos()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Datatable_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

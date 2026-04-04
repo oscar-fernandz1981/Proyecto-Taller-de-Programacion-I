@@ -30,9 +30,40 @@
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         <?php endif; ?>
-
+    
+    <br>    
     <h3 class="text-center Btext">Listado de Productos</h3>
     
+
+    <div class="col-12 fondo4 container rounded">
+    <br>    
+    <!--<h3 class="text-center Btext">Listado de Productos</h3>-->
+
+    <?php if (!$perfil): // Si no hay perfil_id en la sesión, es visitante ?>
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-6">
+                <form action="<?= base_url('catalogo') ?>" method="get">
+                    <div class="input-group shadow-sm">
+                        <input type="text" name="q" class="form-control" 
+                               placeholder="¿Qué estás buscando? (Ej: termo, batman...)" 
+                               value="<?= request()->getGet('q') ?>">
+                        <button class="btn btn-primary" type="submit">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                            </svg> Buscar
+                        </button>
+                    </div>
+                </form>
+                <?php if (request()->getGet('q')): ?>
+                    <div class="text-center mt-2">
+                        <a href="<?= base_url('catalogo') ?>" class="text-danger small">Limpiar búsqueda</a>
+                    </div>
+                <?php endif; ?>
+            </div>
+        </div>
+    <?php endif; ?>
+
+
     <table class="table table-responsive table-hover fondo4" id="users-list">
         <thead>
             <tr class="bg-success">
@@ -50,7 +81,34 @@
         <?php foreach($productos as $prod): ?>
             <tr>
                 <td><?php echo $prod['nombre_prod']; ?></td>
-                <td><?php echo $prod['precio_vta']; ?></td>
+
+                <td>
+    <?php if ($prod['promo_activada'] == 1): ?>
+        <?php 
+            $original = $prod['precio_vta'];
+            $porcentaje = $prod['descuento_porcentaje'];
+            $precio_final = $original - ($original * $porcentaje / 100);
+        ?>
+
+        <?php if ($perfil == 1): // SI ES ADMIN ?>
+            <div class="text-start">
+                <span class="text-muted small">Base: $<?= number_format($original, 2); ?></span><br>
+                <span class="badge bg-dark">-<?= $porcentaje ?>%</span><br>
+                <b class="text-primary">P. Venta: $<?= number_format($precio_final, 2); ?></b>
+            </div>
+
+        <?php else: // SI ES CLIENTE O VISITANTE ?>
+            <div class="d-flex flex-column">
+                <del class="text-muted small">$<?= number_format($original, 2); ?></del>
+                <span class="badge bg-danger mb-1" style="width: fit-content;"><?= $porcentaje ?>% OFF</span>
+                <b class="text-success" style="font-size: 1.1rem;">$<?= number_format($precio_final, 2); ?></b>
+            </div>
+        <?php endif; ?>
+
+    <?php else: ?>
+        <span class="fw-bold">$<?= number_format($prod['precio_vta'], 2); ?></span>
+    <?php endif; ?>
+</td>
 
                 <?php 
                     $categoria = 'Sin Categoría'; 
@@ -123,3 +181,4 @@
     </table>
 <?php } ?>
 </div>
+</div> </div>

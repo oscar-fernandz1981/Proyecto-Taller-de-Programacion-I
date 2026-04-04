@@ -15,7 +15,7 @@ class Datatable_controller extends Controller
         echo view('header',$dato);
         echo view('panel');
         echo view('back/usuario/usuarios_view', $data);
-        echo view('footer2');
+        echo view('footer');
        
     } 
 
@@ -27,20 +27,23 @@ class Datatable_controller extends Controller
         echo view('header',$dato);
         echo view('panel');
          echo view('back/admin/editarUsuarios_view',compact('data'));
-          echo view('footer2');
+          echo view('footer');
        
    }
 
-   public function editoMisDatos($id_usuario){
+   public function editoMisDatos() {
+    $session = session();
+    $id_usuario = $session->get('id_usuario'); // Obtenemos el ID del logueado
 
-        $userModel=new usuario_Model();
-        $data=$userModel->getUsuario($id_usuario);
-        $dato['titulo']='Editar Usuario';
-        echo view('header',$dato);
-        echo view('panel');
-         echo view('back/usuario/editoMisDatos_view',compact('data'));
-          echo view('footer2');
-       
-   }
-
+    $userModel = new usuario_Model();
+    $data = $userModel->getUsuario($id_usuario);
+    
+    $dato['titulo'] = 'Editar mis Datos';
+    echo view('header', $dato);
+    echo view('panel');
+    echo view('back/usuario/editoMisDatos_view', compact('data'));
+    echo view('footer');
 }
+       
+   }
+

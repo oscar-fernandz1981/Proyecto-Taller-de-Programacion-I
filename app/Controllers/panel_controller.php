@@ -40,7 +40,7 @@ class panel_controller extends Controller
         echo view('header');
         echo view('panel', $data);
         echo view('bienvenida');
-        echo view('footer2',$data);
+        echo view('footer',$data);
     }
 
 

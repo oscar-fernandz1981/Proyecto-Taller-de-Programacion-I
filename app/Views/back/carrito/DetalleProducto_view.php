@@ -40,17 +40,33 @@
             </div>
         <?php }?>
   </div>
-  
-  <div class="mb-3">
-   <label for="exampleFormControlInput1" class="form-label">Precio en ARS$</label>
-   <input name="precio_vta" type="text" readonly="true" class="form-control" value="<?php echo $data['precio_vta']?>">
-   <!-- Error -->
-        <?php if($validation->getError('precio_vta')) {?>
-            <div class='alert alert-danger mt-2'>
-              <?= $error = $validation->getError('precio_vta'); ?>
-            </div>
-        <?php }?>
-  </div>
+<div class="mb-3">
+    <label class="form-label">Precio en ARS$</label>
+    
+    <?php if ($data['promo_activada'] == 1): ?>
+        <?php 
+            $descuento = ($data['precio_vta'] * $data['descuento_porcentaje']) / 100;
+            $precio_final = $data['precio_vta'] - $descuento;
+        ?>
+        <div class="input-group">
+            <span class="input-group-text text-decoration-line-through text-danger">
+                $<?= number_format($data['precio_vta'], 2, ',', '.'); ?>
+            </span>
+            <input type="text" readonly="true" class="form-control fw-bold text-success" 
+                   style="font-size: 1.2rem;"
+                   value="$<?= number_format($precio_final, 2, ',', '.'); ?>">
+            <span class="badge bg-warning text-dark d-flex align-items-center">
+                <?= $data['descuento_porcentaje']; ?>% OFF
+            </span>
+        </div>
+        
+        <input type="hidden" name="precio_vta_final" value="<?= $precio_final; ?>">
+
+    <?php else: ?>
+        <input name="precio_vta" type="text" readonly="true" class="form-control" 
+               value="$<?= number_format($data['precio_vta'], 2, ',', '.'); ?>">
+    <?php endif; ?>
+</div>
 
   <div class="mb-3">
    <label for="exampleFormControlInput1" class="form-label">Stock</label>
@@ -143,8 +159,18 @@
                                            }
                                            ?>
             
-           <a type="reset" href="<?php echo base_url('catalogo');?>" class="btn btn-outline-danger float-end">Cancelar</a>
-      <br><br>
+           
+           <?php
+                // Decidimos la ruta de retorno
+                $url_regreso = ($fuente == 'promo') ? base_url('promociones') : base_url('catalogo');
+                $texto_boton = ($fuente == 'promo') ? 'Volver a Ofertas' : 'Volver al Catálogo';
+            ?>
+
+            <a href="<?= $url_regreso; ?>" class="btn btn-outline-secondary float-end">
+                 <?= $texto_boton; ?>
+            </a>
+      
+           <br><br>
  </div>
 </form>
 </div>
