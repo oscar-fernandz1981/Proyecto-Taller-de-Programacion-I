@@ -139,6 +139,8 @@ El sistema se basa en 5 entidades principales:
 5.	Ventas Detalle: Relación N a N que detalla productos y cantidades por cada venta.
 
 
+<img width="924" height="689" alt="modelado de datos" src="https://github.com/user-attachments/assets/e2ea783f-d202-4abd-b63a-920a1c5221f2" />
+
 
 
 
