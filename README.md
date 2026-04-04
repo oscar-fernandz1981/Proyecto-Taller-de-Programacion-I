@@ -1,5 +1,5 @@
-<img width="450" height="378" alt="image" src="https://github.com/user-attachments/assets/a5e6f063-7980-4aa5-938c-8f3a8ad3ab94" /> <br>
-<img width="464" height="464" alt="image" src="https://github.com/user-attachments/assets/07484959-681d-4c86-9242-2e997ddbd81b" />  <br>
+<img width="450" height="378" alt="image" src="https://github.com/user-attachments/assets/a5e6f063-7980-4aa5-938c-8f3a8ad3ab94" /><br>
+<img width="464" height="464" alt="image" src="https://github.com/user-attachments/assets/07484959-681d-4c86-9242-2e997ddbd81b" /><br>
 
 Facultad de Ciencias Exactas y Naturales y Agrimensura<br>
 Licenciatura en Sistemas de Información<br>
@@ -52,68 +52,50 @@ ________________________________________
 El sistema funciona como una aplicación web autónoma bajo el patrón Modelo-Vista-Controlador (MVC), interactuando con una base de datos relacional MySQL.
 
 ## Funciones del Producto
-•	Gestión de Usuarios: Registro, login y perfiles (Admin y Cliente).
-•	Gestión de Catálogo: CRUD (Alta, Baja, Modificación y Listado) de productos con categorías.
-•	Proceso de Compra: Selección de productos, gestión de cantidades en carrito y confirmación de pedido.
-•	Facturación: Generación automática de facturas PDF tras la compra.
-•	Contacto: Formulario para consultas de usuarios hacia la administración.
+•	Gestión de Usuarios: Registro, login y perfiles (Admin y Cliente).<br>
+•	Gestión de Catálogo: CRUD (Alta, Baja, Modificación y Listado) de productos con categorías.<br>
+•	Proceso de Compra: Selección de productos, gestión de cantidades en carrito y confirmación de pedido.<br>
+•	Facturación: Generación automática de facturas PDF tras la compra.<br>
+•	Contacto: Formulario para consultas de usuarios hacia la administración.<br>
 
 ## Características de los Usuarios
-•	Administrador: Control total del inventario, gestión de stock y visualización de ventas.
-•	Cliente: Navegación por catálogo, compra de productos y acceso a su historial de facturación.
-•	Visitante: Solo visualización de productos y acceso a formularios de contacto/registro.
+•	Administrador: Control total del inventario, gestión de stock y visualización de ventas.<br>
+•	Cliente: Navegación por catálogo, compra de productos y acceso a su historial de facturación.<br>
+•	Visitante: Solo visualización de productos y acceso a formularios de contacto/registro.<br>
 
 
 ________________________________________
 
-## REQUISITOS ESPECÍFICOS (IEEE 830)
+## REQUISITOS ESPECÍFICOS (IEEE 830)<br>
 
-## Requisitos Funcionales
-•	RF-01 (Autenticación): El sistema debe permitir el ingreso diferenciado mediante correo y contraseña.
-•	RF-02 (Gestión de Productos): El administrador podrá realizar el alta de productos cargando nombre, descripción, precio, stock y una imagen.
-•	RF-03 (Carrito de Compras): El sistema permitirá al cliente agregar múltiples ítems, calculando subtotales y totales automáticamente.
-•	RF-04 (Control de Stock): Al confirmar una compra, el sistema debe descontar automáticamente las unidades del inventario.
-•	RF-05 (Generación de PDF): El sistema utilizará la librería Dompdf para emitir un comprobante legal de la transacción.
-•	RF-06 (Seguridad): Uso de Filtros (Filters) para restringir el acceso a rutas de administración a usuarios no autorizados.
-
-
-## Requisitos No Funcionales
-•	RNF-01 (Arquitectura): Implementado en PHP 8.x bajo el framework CodeIgniter 4.
-•	RNF-02 (Interfaz): Diseño responsivo utilizando Bootstrap 5.
-•	RNF-03 (Persistencia): Motor de base de datos MySQL (MariaDB).
-•	RNF-04 (Usabilidad): Implementación de DataTables para búsqueda y filtrado rápido en listas.
+## Requisitos Funcionales<br>
+•	RF-01 (Autenticación): El sistema debe permitir el ingreso diferenciado mediante correo y contraseña.<br>
+•	RF-02 (Gestión de Productos): El administrador podrá realizar el alta de productos cargando nombre, descripción, precio, stock y una imagen.<br>
+•	RF-03 (Carrito de Compras): El sistema permitirá al cliente agregar múltiples ítems, calculando subtotales y totales automáticamente.<br>
+•	RF-04 (Control de Stock): Al confirmar una compra, el sistema debe descontar automáticamente las unidades del inventario.<br>
+•	RF-05 (Generación de PDF): El sistema utilizará la librería Dompdf para emitir un comprobante legal de la transacción.<br>
+•	RF-06 (Seguridad): Uso de Filtros (Filters) para restringir el acceso a rutas de administración a usuarios no autorizados.<br>
 
 
-
-
-________________________________________
-
-## INTERFACES
-
-## Interfaz de Usuario
-El diseño se basa en una paleta de colores profesional, con un carrusel dinámico en el inicio y tarjetas (cards) informativas para los productos.
-
-## Interfaz de Software
-•	Dompdf: Para la exportación de documentos.
-•	CodeIgniter Cart: Para la persistencia temporal de los productos seleccionados.
-
+## Requisitos No Funcionales<br>
+•	RNF-01 (Arquitectura): Implementado en PHP 8.x bajo el framework CodeIgniter 4.<br>
+•	RNF-02 (Interfaz): Diseño responsivo utilizando Bootstrap 5.<br>
+•	RNF-03 (Persistencia): Motor de base de datos MySQL (MariaDB).<br>
+•	RNF-04 (Usabilidad): Implementación de DataTables para búsqueda y filtrado rápido en listas.<br>
 
 
 
 
 ________________________________________
 
-## MODELADO DE DATOS (Descripción Técnica)
+## INTERFACES<br>
 
-El sistema se basa en 5 entidades principales:
-1.	Usuarios: Almacena credenciales y perfil_id.
-2.	Productos: Datos técnicos y estado de "eliminado" (baja lógica).
-3.	Categorías: Clasificación (Termos, Auriculares, Juguetes).
-4.	Ventas Cabecera: Datos generales del pedido (Fecha, Usuario, Total).
-5.	Ventas Detalle: Relación N a N que detalla productos y cantidades por cada venta.
+## Interfaz de Usuario<br>
+El diseño se basa en una paleta de colores profesional, con un carrusel dinámico en el inicio y tarjetas (cards) informativas para los productos.<br>
 
-
-<img width="924" height="689" alt="modelado de datos" src="https://github.com/user-attachments/assets/e2ea783f-d202-4abd-b63a-920a1c5221f2" />
+## Interfaz de Software<br>
+•	Dompdf: Para la exportación de documentos.<br>
+•	CodeIgniter Cart: Para la persistencia temporal de los productos seleccionados.<br>
 
 
 
@@ -121,7 +103,25 @@ El sistema se basa en 5 entidades principales:
 
 ________________________________________
 
-## CONCLUSIÓN
+## MODELADO DE DATOS (Descripción Técnica)<br>
+
+El sistema se basa en 5 entidades principales:<br>
+1.	Usuarios: Almacena credenciales y perfil_id.<br>
+2.	Productos: Datos técnicos y estado de "eliminado" (baja lógica).<br>
+3.	Categorías: Clasificación (Termos, Auriculares, Juguetes).<br>
+4.	Ventas Cabecera: Datos generales del pedido (Fecha, Usuario, Total).<br>
+5.	Ventas Detalle: Relación N a N que detalla productos y cantidades por cada venta.<br>
+
+
+<img width="924" height="689" alt="modelado de datos" src="https://github.com/user-attachments/assets/e2ea783f-d202-4abd-b63a-920a1c5221f2" /><br>
+
+
+
+
+
+________________________________________
+
+## CONCLUSIÓN<br>
 El sistema cumple con los objetivos de un CRUD avanzado, integrando lógica de negocio compleja como el manejo de stock y seguridad por niveles, proporcionando una solución escalable para un comercio minorista.
 
 
