@@ -1,38 +1,38 @@
-<img width="450" height="378" alt="image" src="https://github.com/user-attachments/assets/a5e6f063-7980-4aa5-938c-8f3a8ad3ab94" />
-<img width="464" height="464" alt="image" src="https://github.com/user-attachments/assets/07484959-681d-4c86-9242-2e997ddbd81b" />
+<img width="450" height="378" alt="image" src="https://github.com/user-attachments/assets/a5e6f063-7980-4aa5-938c-8f3a8ad3ab94" /> <br>
+<img width="464" height="464" alt="image" src="https://github.com/user-attachments/assets/07484959-681d-4c86-9242-2e997ddbd81b" />  <br>
 
-Facultad de Ciencias Exactas y Naturales y Agrimensura
-Licenciatura en Sistemas de Información
-Taller de Programación I
-Especificación de Requerimientos – Proyecto Multirubro BLASS
-Fernandez, R. Oscar
+Facultad de Ciencias Exactas y Naturales y Agrimensura<br>
+Licenciatura en Sistemas de Información<br>
+Taller de Programación I<br>
+Especificación de Requerimientos – Proyecto Multirubro BLASS<br>
+Fernandez, R. Oscar<br>
 
-ESPECIFICACIÓN DE REQUISITOS DE SOFTWARE (ERS) - PROYECTO BLASS
-## Tabla de Contenidos
-1. [INTRODUCCIÓN](#INTRODUCCIÓN)
-1.1 [Propósito](#Propósito)
-1.2 [Alcance](#Alcance)	
-2. [DESCRIPCIÓN-GENERAL](#DESCRIPCIÓN-GENERAL)
-2.1 [Perspectiva-del-Producto](#Perspectiva-del-Producto)
-2.2 [Funciones-del-Producto](#Funciones-del-Producto)
-2.3 [Características-de-los-Usuarios](#Características-de-los-Usuarios)
-3. [REQUISITOS-ESPECÍFICOS-(IEEE830)](#REQUISITOS-ESPECÍFICOS-(IEEE830))
-3.1 [Requisitos-Funcionales](#Requisitos-Funcionales)
-3.2 [Requisitos-No-Funcionales](#Requisitos-No-Funcionales)
-4. [INTERFACES](#INTERFACES)
-4.1 [Interfaz-de-Usuario](#Interfaz-de-Usuario)
-4.2 [Interfaz-de-Software](#Interfaz-de-Software)
-5. [MODELADO-DE-DATOS-(Descripción-Técnica)](#MODELADO-DE-DATOS-(Descripción-Técnica))
-6. [CONCLUSIÓN](#CONCLUSIÓN)
+ESPECIFICACIÓN DE REQUISITOS DE SOFTWARE (ERS) - PROYECTO BLASS<br>
+## Tabla de Contenidos<br>
+1. [INTRODUCCIÓN](#INTRODUCCIÓN)<br>
+1.1 [Propósito](#Propósito)<br>
+1.2 [Alcance](#Alcance)	<br>
+2. [DESCRIPCIÓN-GENERAL](#DESCRIPCIÓN-GENERAL)<br>
+2.1 [Perspectiva-del-Producto](#Perspectiva-del-Producto)<br>
+2.2 [Funciones-del-Producto](#Funciones-del-Producto)<br>
+2.3 [Características-de-los-Usuarios](#Características-de-los-Usuarios)<br>
+3. [REQUISITOS-ESPECÍFICOS-(IEEE830)](#REQUISITOS-ESPECÍFICOS-(IEEE830))<br>
+3.1 [Requisitos-Funcionales](#Requisitos-Funcionales)<br>
+3.2 [Requisitos-No-Funcionales](#Requisitos-No-Funcionales)<br>
+4. [INTERFACES](#INTERFACES)<br>
+4.1 [Interfaz-de-Usuario](#Interfaz-de-Usuario)<br>
+4.2 [Interfaz-de-Software](#Interfaz-de-Software)<br>
+5. [MODELADO-DE-DATOS-(Descripción-Técnica)](#MODELADO-DE-DATOS-(Descripción-Técnica))<br>
+6. [CONCLUSIÓN](#CONCLUSIÓN)<br>
 
 
 
 ________________________________________
-ESPECIFICACIÓN DE REQUISITOS DE SOFTWARE (ERS) - PROYECTO BLASS
-Proyecto: Sitio de Compras Online Multirubro BLASS
-Autor: Fernandez, R. Oscar
-Fecha: Febrero 2026
-Versión: 2.0 (Final)
+ESPECIFICACIÓN DE REQUISITOS DE SOFTWARE (ERS) - PROYECTO BLASS<br>
+Proyecto: Sitio de Compras Online Multirubro BLASS<br>
+Autor: Fernandez, R. Oscar<br>
+Fecha: Febrero 2026<br>
+Versión: 2.0 (Final)<br>
 ________________________________________
 
 ## INTRODUCCIÓN
