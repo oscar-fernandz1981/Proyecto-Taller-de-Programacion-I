@@ -1,11 +1,11 @@
 <img width="450" height="378" alt="image" src="https://github.com/user-attachments/assets/a5e6f063-7980-4aa5-938c-8f3a8ad3ab94" /><br>
 <img width="464" height="464" alt="image" src="https://github.com/user-attachments/assets/07484959-681d-4c86-9242-2e997ddbd81b" /><br>
 
-Facultad de Ciencias Exactas y Naturales y Agrimensura<strong><br>
-Licenciatura en Sistemas de Información<br>
-Taller de Programación I<br>
-Especificación de Requerimientos – Proyecto Multirubro BLASS<br>
-Fernandez, R. Oscar<br>
+<b>Facultad de Ciencias Exactas y Naturales y Agrimensura</b><br>
+<b>Licenciatura en Sistemas de Información</b><br>
+<b>Taller de Programación I</b><br>
+<b>Especificación de Requerimientos – Proyecto Multirubro BLASS</b><br>
+<b>Fernandez, R. Oscar</b><br>
 
 ESPECIFICACIÓN DE REQUISITOS DE SOFTWARE (ERS) - PROYECTO BLASS<br>
 ## Tabla de Contenidos<br>
